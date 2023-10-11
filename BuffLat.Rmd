@@ -1,0 +1,395 @@
+---
+title: "Buffalo bTB Testing Data Analysis"
+author: "Andrew J K Conlan"
+date: "10/10/2023"
+bibliography: BuffaloBLCA.bib  
+csl: chicago-author-date-16th-edition.csl
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r load_and_reshape,echo=FALSE, fig.path='Figs/',fig.width=5, fig.height=5,results='hide', warning=FALSE,message=FALSE}
+if(!require('tidyverse')){install.packages('tidyverse');require('tidyverse')}
+
+buffalo <- as_tibble(read.csv('Buffalo_testing.csv'))
+mean_percent <- function(x){100*mean(x)}
+naive_errorL <- function(x){100*(mean(x)-sqrt(mean(x)*(1-mean(x)))/sqrt(length(x))) }
+naive_errorU <- function(x){100*(mean(x)+sqrt(mean(x)*(1-mean(x)))/sqrt(length(x))) }
+
+non_zero <- unlist(buffalo %>% group_by(s_no) %>% summarise(SIT=sum(SIT_Result),SICCT=sum(SICCT_Result),DST=sum(DST_Result)) %>% filter(SIT>0 | SICCT>0 |  DST>0) %>% select(s_no))
+
+buff_nz <- buffalo %>% filter(is.element(s_no,non_zero))
+
+G=length(unique(buff_nz$s_no))
+A=dim(buff_nz)[1]
+T = 3
+E=2^T
+
+response_mask = expand.grid(c(0,1),c(0,1),c(0,1))
+
+# All animals
+# Encode test pattern for each animal
+y=sapply(1:dim(buff_nz)[1],function(i){which(apply(response_mask,1,function(x,i){prod(i==x)},i = buff_nz[i,22:24])==1)})
+
+latent_dat <- list(G=G,A=A,T=T,E=E,gind=as.numeric(factor(buff_nz$s_no)),
+                   y=y,
+                   ind=as.matrix(response_mask))
+
+# Data set for logistic regression analysis
+
+buff_df <- buffalo %>% mutate(milk_prod = !is.na(milk_prod),
+                   lact_stage = str_sub(buffalo$lact_stage,1,1))
+
+#Code no lactation as zero (replace NA values)
+buff_df$lact_stage[is.na(buff_df$lact_stage)] = 0
+
+# Aggregate lactation stages >= 5 to single level '5+'
+buff_df <- buff_df %>% mutate(lact_stage = sapply(lact_stage,function(x){if(x < 5){return(as.character(x))}else{return('5+')}}))
+
+
+# Ensure that lactation variable is treated as factor
+buff_df <- buff_df %>% mutate(milk_prod=factor(milk_prod),lact_stage=factor(lact_stage))
+
+
+```
+
+# Data Set
+
+The data set consists of the results of `r T` diagnostic tests for bovine Tuberculosis (bTB) for `r A` animals taken from `r G` groups for which there was at least one positive test result. The diagnostic threshold for SIT & SICCT was taken as $\geq 4$ mm  ($\Delta B$, $\Delta B - \Delta A$) and $\geq 2$ mm for DST ($\Delta DST$).
+
+Figure 1 below compares the apparent group prevalence in each herd based on these `r T` diagnostic tests, point estimates along with naive 95% binomial confidence intervals.
+
+```{r group_prevalence,echo=FALSE, fig.path='Figs/',fig.width=5, fig.height=5,results='hide', warning=FALSE,message=FALSE}
+
+naive_error <- function(x){er<-sqrt(mean(x)*(1-mean(x)))/sqrt(length(x))
+data.frame(y=100*mean(x),ymin=100*(mean(x)-er),ymax=100*(mean(x)+er))}
+
+group_tests <- buff_nz %>% mutate(group = as.numeric(factor(buff_nz$s_no))) %>% select(group,anim_id,age,SIT_Result,SICCT_Result,DST_Result) %>%
+  pivot_longer(4:6,names_to = 'Test')
+
+ggplot(group_tests,aes(x=as.factor(group),y=as.numeric(value),col=Test)) + stat_summary(fun.data=naive_error,position=position_dodge(width=0.5)) + 
+  ylab('Apparent Prevalence %') + 
+  xlab('Group')
+
+latent_table <- do.call(rbind,tapply(latent_dat$y,latent_dat$gind,function(x){hist(x,breaks=c(0:8),plot=F)$counts}))
+
+write.csv(latent_table,'latent_table.csv')
+
+```
+# Walter-Hui Latent Class Model
+
+The Walter-Hui latent class model provides a theoretical framework to estimate the sensitivity and specificity of competing diagnostic tests when samples are available from at least two populations with differing prevalence [@collins_estimation_2014; @hui_estimating_1980]. A key assumption of the Walter-Hui model is that of conditional independence between tests, i.e. the probability of a test $k$ being positive for individual ($i$), $P(T_{i,k} = 1)$ only depends on the latent (true) disease status of the individual ($D \in \{0,1\}$) and not the response of the other tests. Under this assumption the (conditional) probability of a positive test result given that an animal is infected ($D=1$) or disease free ($D=0$) can then be modelled by a single parameter for each test:
+
+\[ P(T_{i,k} = 1 | D = 1) = a_{k} \]
+\[ P(T_{i,k} = 1 | D = 0) = b_{k} \]
+
+and the sensitivity of test $k$ will then simply be $a_{k}$ and the specificity will be $1-b_{k}$.
+
+Following [@collins_estimation_2014; @dendukuri_modeling_2009], and to allow for an extension to model any conditional dependence between tests, we parameterise the model using a probit ($\Phi$) link function :
+
+\[ P(T_{t,k} = 1 | D = 1) = \Phi(a_{t,1}) \]
+\[ P(T_{t,k} = 1 | D = 0) = \Phi(a_{t,0}) \]
+
+To ensure numerical stability we restrict the sensitivity parameters (on the probit scale) $a_{t,1}$ to the range  $[-8,8]$. To force identifiability of the model we make the assumption that no tests have a specificity of $< 50\%$ or sensitivity $< 20\%$ and thus restrict $a_{t,0}$ to the half-range $[-8,0]$ and $a_{t,1}$ to the range $[-1,0]$. 
+
+For our default priors we assume a normal (0,1) distribution for both $a_{t,1}, a_{t,0}$ and a beta $(1,1)$ distribution for the within-herd prevalence. To assess the sensitivity of our estimates to the prior assumptions we compare this default model to one with uniform prior distributions for all parameters.
+
+The model was implemented using stan and estimated using Hamiltonian MCMC [@carpenter_stan_2017]. Convergence was assessed through visual inspection of the chains and standard diagnostic statistics ($\hat{R}=1$ for all parameters after $2,000$ iterations for 8 chains). 
+
+\newpage
+
+```{r fit_walter_hui,echo=FALSE, fig.path='Figs/',fig.width=5, fig.height=5,results='hide', cache=TRUE, warning=FALSE,message=FALSE}
+if(!require(rstan)){install.packages('rstan');require('rstan')}
+rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores())
+
+fit_wh <- stan(file = 'WHProbitB.stan', data = latent_dat, chains = 8, control = list(adapt_delta = 0.8))
+
+fit_whU <- stan(file = 'WHProbitBuniform.stan', data = latent_dat, chains = 8, control = list(adapt_delta = 0.8),iter=8000)
+```
+
+### Posterior estimates
+
+```{r estimates,echo=FALSE, fig.path='Figs/',fig.width=8, fig.height=8,results='hide', warning=FALSE,message=FALSE}
+if(!require('tidybayes')){install.packages('tidybayes');require('tidybayes')}
+if(!require('patchwork')){install.packages('patchwork');require('patchwork')}
+
+sensitivity_post <- fit_wh %>% gather_draws(sensitivity[t])
+sensitivity_post <- sensitivity_post %>% ungroup() %>% mutate(t=c('SIT','SICCT','DST')[t],
+                                                              Prior='Default')
+
+tmp <- fit_whU %>% gather_draws(sensitivity[t])
+tmp <- tmp %>% ungroup() %>% mutate(t=c('SIT','SICCT','DST')[t],
+                                                              Prior='Uniform')
+
+sensitivity_post <- sensitivity_post %>% bind_rows(tmp)
+
+
+specificity_post <- fit_wh %>% gather_draws(specificity[t])
+specificity_post <- specificity_post %>% ungroup() %>% mutate(t=c('SIT','SICCT','DST')[t],
+                                                              Prior='Default')
+
+tmp <- fit_whU %>% gather_draws(specificity[t])
+tmp <- tmp %>% ungroup() %>% mutate(t=c('SIT','SICCT','DST')[t],
+                                                              Prior='Uniform')
+
+specificity_post  <- specificity_post %>% bind_rows(tmp)
+
+prevalence_post <- fit_wh %>% gather_draws(prevalence[g]) %>% mutate(Prior='Default')
+
+prevalence_post <- prevalence_post %>% bind_rows(
+  fit_whU %>% gather_draws(prevalence[g]) %>% mutate(Prior='Uniform'))
+
+#prob_inf <- fit_wh %>% gather_draws(post_I[a]) %>% summarise(post_m = mean(.value),post_std = sd(.value)) 
+
+credible <- function(x){data.frame(y=median(x),ymin=quantile(x,0.025),ymax=quantile(x,0.975))}
+
+#ggplot(sensitivity_post,aes(x=t,y=100*.value)) + stat_summary(fun.data=credible, position=position_dodge(width=0.5)) + 
+#  coord_flip() + ylab('% Sensitivity') + xlab('') + scale_x_discrete(limits = rev(levels(factor(sensitivity_post$t)))) + labs(col='')+ylim(c(0,100))
+
+#print(ggplot(specificity_post,aes(x=t,y=100*.value)) + stat_summary(fun.data=credible, position=position_dodge(width=0.5)) + coord_flip() + ylab('% Specificity') + xlab('') + scale_x_discrete(limits = rev(levels(factor(sensitivity_post$t)))) + labs(col='')+ylim(c(0,100)))
+
+
+p1 = ggplot(sensitivity_post %>% filter(Prior=='Default'),
+            aes(x=100*.value,fill=t)) + geom_density(alpha=0.25) + 
+  xlab('% Sensitivity') + ylab('') + guides(fill=guide_legend(title=''))
+p2 = ggplot(specificity_post %>% filter(Prior=='Default'),
+            aes(x=100*.value,fill=t)) + geom_density(alpha=0.25) + 
+  xlab('% Specificity') + ylab('')  + guides(fill=guide_legend(title=''))
+  
+
+obs_prev <- group_tests %>% group_by(group,Test) %>% summarise(reactors=100*mean(value))
+obs_prev <- obs_prev %>% mutate(Test = sapply(strsplit(Test,split='_'),function(x){x[1]}))
+
+p3 = ggplot(prevalence_post %>% filter(Prior=='Default'),
+            aes(x=g,y=100*.value,shape='True')) + stat_summary(fun.data=credible, position=position_dodge(width=1)) + coord_flip()  + ylab('% Positive') + xlab('Herd') + scale_x_discrete(limits = rev(levels(prevalence_post$g)))+
+geom_point(obs_prev,
+             mapping=aes(x=group,
+                         y=reactors,col=Test),size=2)+ labs(col='',shape='') + theme(legend.position="bottom")
+
+print(p3 + (p1/p2 + plot_layout(guides = "collect")))
+
+post_table <-sensitivity_post %>% bind_rows(specificity_post) %>% group_by(.variable,t,Prior) %>% summarise(m=100*median(.value),l=100*quantile(.value,0.025),u=100*quantile(.value,0.975))
+
+print(post_table)
+
+```
+
+### Impact of prior assumptions
+
+```{r prior_comparison,echo=FALSE, fig.path='Figs/',fig.width=8, fig.height=8,results='hide', warning=FALSE,message=FALSE}
+
+p1 = ggplot(sensitivity_post,
+            aes(x=100*.value,fill=t,linetype=Prior)) + geom_density(alpha=0.25) + 
+  xlab('% Sensitivity') + ylab('') + guides(fill=guide_legend(title=''))+ facet_wrap(~t,scales='free_y')
+p2 = ggplot(specificity_post,
+            aes(x=100*.value,fill=t,linetype=Prior)) + geom_density(alpha=0.25) + 
+  xlab('% Specificity') + ylab('')  + guides(fill=guide_legend(title=''))+ facet_wrap(~t,scales='free_y')
+  
+
+obs_prev <- group_tests %>% group_by(group,Test) %>% summarise(reactors=100*mean(value))
+obs_prev <- obs_prev %>% mutate(Test = sapply(strsplit(Test,split='_'),function(x){x[1]}))
+
+p3 = ggplot(prevalence_post,
+            aes(x=g,y=100*.value,linetype=Prior)) + stat_summary(fun.data=credible, position=position_dodge(width=1)) + coord_flip()  + ylab('% True Prevalence') + xlab('Herd') + scale_x_discrete(limits = rev(levels(prevalence_post$g)))+ labs(col='',shape='',linetype='') + theme(legend.position="bottom")
+
+
+print(p3 + (p1/p2 + plot_layout(guides = "collect")))
+
+```
+
+## Posterior Predictive Checks of Model Fit
+
+Model fit was assessed through two sets of posterior predictive checks: the apparent prevalence and the pairwise probability of agreement between each pair of diagnostic tests ($k,k'$) in each group (unaffected, affected).
+
+### Apparent Prevalance
+
+The fitted model demonstrates an excellent agreement with the apparent prevalence across all infected and uninfected herds. All of the observed values lie within the 95% posterior predictive intervals of the estimated model.
+
+#### Default Priors
+
+```{r apparentpp,echo=FALSE, fig.path='Figs/',fig.width=8, fig.height=8,results='hide', warning=FALSE,message=FALSE}
+if(!require('parallel')){install.packages('parallel');require(parallel)}
+simulate_WHA <- function(latent_dat,fit_wh)
+{
+  G = latent_dat$G
+  A = latent_dat$A
+  T = latent_dat$T
+  E = latent_dat$E
+  
+  ind = latent_dat$ind
+  
+  seed=round(runif(1,-.Machine$integer.max,.Machine$integer.max))
+  
+  post <- fit_wh %>% spread_draws(a0[t],a1[t],n=1,seed=seed) 
+  
+  a0 = post$a0
+  a1 = post$a1
+  
+  post <- fit_wh %>% spread_draws(prevalence[g],n=1,seed=seed) 
+  
+  prevalence = post$prevalence
+  
+  oot = numeric(A)
+  
+  for(a in 1:A)
+  {
+  
+  p = numeric(E);
+  for(e in 1:E)
+  {
+    s_prod = 1;
+    p_prod = 1;
+    
+    for(t in 1:T)
+    {
+      s_prod = s_prod*(ind[e,t] * pnorm(a1[t]) + (1-ind[e,t]) * (1-pnorm(a1[t])));
+      p_prod = p_prod*(ind[e,t] * pnorm(a0[t]) + (1-ind[e,t]) * (1-pnorm(a0[t])));
+    }
+    
+      p[e] = prevalence[latent_dat$gind[a]] * (s_prod) + (1-prevalence[latent_dat$gind[a]]) * (p_prod);
+    
+  }
+  oot[a] =  which(rmultinom(1,1,p)==1)
+  }
+return(oot)
+}
+
+pred<-mclapply(1:100,function(x){simulate_WHA(latent_dat,fit_wh)})
+
+calculate_prevalence = function(y,latent_dat)
+{
+  pred <- as_tibble(data.frame(group=latent_dat$gind,latent_dat$ind[y,]))
+  pred <- pred %>% group_by(group) %>% summarise(SIT=sum(Var1), SICCT=sum(Var2),DST=sum(Var3))
+return(pred %>% pivot_longer(-group))
+}
+
+pp_prevalance <- do.call(rbind,lapply(pred,function(y){calculate_prevalence(y,latent_dat)}))
+
+obs_reactors <- group_tests %>% group_by(group,Test) %>% summarise(value=sum(value))
+
+obs_reactors <- obs_reactors %>% mutate(Test = str_remove(Test,'_Result'))
+
+ggplot(pp_prevalance,aes(x=factor(name),y=value)) + 
+  facet_wrap(~as.factor(group)) + coord_flip() + geom_violin() +
+  geom_point(obs_reactors,
+             mapping=aes(x=factor(Test),y=value),col='red') + 
+  xlab('Diagnostic Test') +  ylab('Number of Positive Tests')
+
+```
+
+#### Uniform Priors
+
+```{r apparentpp_uni,echo=FALSE, fig.path='Figs/',fig.width=8, fig.height=8,results='hide', warning=FALSE,message=FALSE}
+
+predU<-mclapply(1:100,function(x){simulate_WHA(latent_dat,fit_wh)})
+
+pp_prevalanceU <- do.call(rbind,lapply(predU,function(y){calculate_prevalence(y,latent_dat)}))
+
+obs_reactors <- group_tests %>% group_by(group,Test) %>% summarise(value=sum(value))
+
+obs_reactors <- obs_reactors %>% mutate(Test = str_remove(Test,'_Result'))
+
+ggplot(pp_prevalanceU,aes(x=factor(name),y=value)) + 
+  facet_wrap(~as.factor(group)) + coord_flip() + geom_violin() +
+  geom_point(obs_reactors,
+             mapping=aes(x=factor(Test),y=value),col='red') + 
+  xlab('Diagnostic Test') +  ylab('Number of Positive Tests')
+```
+
+### Pairwise probability of agreement between tests
+
+Following [@dendukuri_modeling_2009] model fit was also assessed through calculating the pairwise probability of agreement between each pair of diagnostic tests ($k,k'$):
+
+\[ \alpha_{k,k'} = \frac{\sum_{i=1}^{N} T_{i,k} T_{i,k'} - (1-T_{i,k}) (1-T_{i,k'})}{N} \]
+
+Any systematic differences between the observed ($\alpha_{k,k'}$) and expected values from the estimated model ($\alpha^{*}_{k,k'}$) would imply a violation of the assumption of conditional independence. We can use draws from the posterior predictive distribution of $\alpha^{*}_{k,k'}$ for our fitted model to form a posterior predictive p-value [@gelman_bayesian_2014]:
+
+\[ P(\alpha^{*}_{k,k'} > \alpha_{k,k'}) \]
+
+If the model fits well, the value of $P(\alpha^{*}_{k,k'} > \alpha_{k,k'})$ is expected to be close to $0.5$, with extreme values close to $0$ or $1$ indicating a lack of fit. All of the posterior predictive p-values are within a 95% interval and there is therefore no evidence of conditional dependence between the tests based on this data.
+
+#### Default Priors
+
+```{r ppp_values, fig.path='Figs/',fig.width=5, fig.height=5, warning=FALSE,message=FALSE}
+
+calculate_alpha = function(y,latent_dat)
+{
+  pred2 <- as_tibble(data.frame(group=latent_dat$gind,latent_dat$ind[y,]))
+   
+  out <- tibble(pair='0-1',alpha=NA)[-1,]
+  
+  for(t in 1:(latent_dat$T-1))
+  {
+    for(k in (t+1):(latent_dat$T))
+    {
+      out <- out %>% bind_rows(tibble(pair=paste(t,'+',k),alpha=mean(unlist(pred2[,t+1]*pred2[,k+1] - (1-pred2[,t+1])*(1-pred2[,k+1])))))
+     }
+  }
+  return(out)
+}
+
+pp_alpha <- do.call(rbind,lapply(pred,function(y){calculate_alpha(y,latent_dat)}))
+
+obs_alpha = calculate_alpha(y,latent_dat)
+
+ggplot(pp_alpha,aes(x=as.factor(pair),y=alpha-obs_alpha$alpha)) + 
+  geom_violin() + ylab('Observed - Expected') + xlab('Interaction')
+ 
+obs_alphaV <- obs_alpha$alpha
+names(obs_alphaV) <- obs_alpha$pair
+ 
+# Predictive p-values
+pp_alpha <- pp_alpha %>% mutate(obs_val=obs_alphaV[pair]) 
+ 
+print(pp_alpha %>% group_by(pair) %>% summarise(mean(alpha > obs_val)))
+```
+
+#### Uniform Priors
+
+```{r ppp_valuesU, fig.path='Figs/',fig.width=5, fig.height=5, warning=FALSE,message=FALSE}
+
+pp_alpha <- do.call(rbind,lapply(predU,function(y){calculate_alpha(y,latent_dat)}))
+
+obs_alpha = calculate_alpha(y,latent_dat)
+
+ggplot(pp_alpha,aes(x=as.factor(pair),y=alpha-obs_alpha$alpha)) + 
+  geom_violin() + ylab('Observed - Expected') + xlab('Interaction')
+ 
+obs_alphaV <- obs_alpha$alpha
+names(obs_alphaV) <- obs_alpha$pair
+ 
+# Predictive p-values
+pp_alpha <- pp_alpha %>% mutate(obs_val=obs_alphaV[pair]) 
+ 
+print(pp_alpha %>% group_by(pair) %>% summarise(mean(alpha > obs_val)))
+```
+
+
+
+### Leave-one-out (LOO) cross validation checks
+
+##### Default Priors
+```{r loo,echo=FALSE, fig.path='Figs/',fig.width=5, fig.height=5, warning=FALSE,message=FALSE}
+require(loo)
+log_lik_wh   <- extract_log_lik(fit_wh  ,c('log_lik'),merge_chains=FALSE)
+loo_wh   <- loo(log_lik_wh  , r_eff=relative_eff(exp(log_lik_wh  )),cores=4,save_psis = TRUE)
+print(loo_wh)
+plot(loo_wh)
+```
+##### Uniform Priors
+```{r loo_uniform,echo=FALSE, fig.path='Figs/',fig.width=5, fig.height=5, warning=FALSE,message=FALSE}
+require(loo)
+log_lik_wh   <- extract_log_lik(fit_whU  ,c('log_lik'),merge_chains=FALSE)
+loo_wh   <- loo(log_lik_wh  , r_eff=relative_eff(exp(log_lik_wh  )),cores=4,save_psis = TRUE)
+print(loo_wh)
+plot(loo_wh)
+```
+
+# References

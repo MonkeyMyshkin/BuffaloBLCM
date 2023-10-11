@@ -1,0 +1,544 @@
+"s_no","region","anim_id","sex","herd_size","type","age","breed","p_status","milk_prod","lact_stage","B1","A1","B2","A2","ΔB","ΔA","ΔB-ΔA","DST1","DST2","ΔDST","SIT_Result","SICCT_Result","DST_Result"
+1,"A",1,"F","X","Heifer","2.75","M","NP","NA","NA",12,12,12,12,0,0,0,15,15,0,FALSE,FALSE,FALSE
+1,"A",2,"F","X","Heifer","3","M","NP","NA","NA",12,12,12,12,0,0,0,15,15,0,FALSE,FALSE,FALSE
+1,"A",3,"F","X","Heifer","1.5","M","NP","NA","NA",11,11,11,11,0,0,0,12,12,0,FALSE,FALSE,FALSE
+1,"A",4,"F","X","Heifer","1.5","M","NP","NA","NA",12,13,12,13,0,0,0,12,12,0,FALSE,FALSE,FALSE
+1,"A",5,"F","X","Adult","9.5","M","NP","11","4",10,11,10,11,0,0,0,11,11,0,FALSE,FALSE,FALSE
+2,"A",6,"F","X","Heifer","3.5","M","P (4m)","NA","NA",17,15,17,15,0,0,0,19,19,0,FALSE,FALSE,FALSE
+2,"A",7,"F","X","Adult","10","M","P (6m)","NA","5",21,19,21,19,0,0,0,20,20,0,FALSE,FALSE,FALSE
+2,"A",8,"F","X","Adult","6","M","P (5m)","8","2",16,15,16,15,0,0,0,13,13,0,FALSE,FALSE,FALSE
+2,"A",9,"F","X","Adult","6","M","P (6m)","NA","2",17,14,17,14,0,0,0,18,18,0,FALSE,FALSE,FALSE
+2,"A",10,"F","X","Adult","5","M","P (2m)","8","1",14,13,14,13,0,0,0,16,16,0,FALSE,FALSE,FALSE
+2,"A",11,"F","X","Adult","5","M","P (5m)","9","1",22,18,22,18,0,0,0,20,20,0,FALSE,FALSE,FALSE
+3,"A",12,"F","X","Heifer","2","M","NP","NA","NA",14,13,14,13,0,0,0,13,13,0,FALSE,FALSE,FALSE
+3,"A",13,"F","X","Heifer","1.5","M","NP","NA","NA",10,12,12,12,2,0,2,10,10,0,FALSE,FALSE,FALSE
+3,"A",14,"F","X","Calf","7m","M","NP","NA","NA",10,8,14,17,4,9,-5,12,12,0,TRUE,FALSE,FALSE
+3,"A",15,"F","X","Heifer","1.25","M","NP","NA","NA",11,11,11,11,0,0,0,14,14,0,FALSE,FALSE,FALSE
+4,"A",16,"F","X","Adult","11.5","M","NP","13","5",13,15,17,18,4,3,1,14,16,2,TRUE,FALSE,TRUE
+4,"A",17,"F","X","Adult","4.5","M","NP","10","1",13,12,13,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+4,"A",18,"F","X","Adult","11","M","P (5m)","7","5",19,18,22,18,3,0,3,21,21,0,FALSE,FALSE,FALSE
+4,"A",19,"F","X","Adult","4","M","P (6m)","5","1",18,17,24,28,6,11,-5,19,23,4,TRUE,FALSE,TRUE
+4,"A",20,"F","X","Adult","3.5","M","P (5m)","NA","NA",15,13,20,18,5,5,0,14,17,3,TRUE,FALSE,TRUE
+5,"A",21,"F","X","Heifer","2","M","NP","NA","NA",12,12,12,12,0,0,0,13,13,0,FALSE,FALSE,FALSE
+5,"A",22,"F","X","Heifer","2","M","NP","NA","NA",11,9,11,10,0,1,-1,12,12,0,FALSE,FALSE,FALSE
+5,"A",23,"F","X","Adult","14","M","P (6m)","NA","7",12,13,23,24,11,11,0,14,17,3,TRUE,FALSE,TRUE
+5,"A",24,"F","X","Adult","5","M","P 3(m)","13","2",18,16,22,23,4,7,-3,18,18,0,TRUE,FALSE,FALSE
+5,"A",25,"F","X","Adult","6","M","NP","7","2",18,18,22,19,4,1,3,16,20,4,TRUE,FALSE,TRUE
+6,"A",26,"F","X","Heifer","2","M","NP","NA","NA",15,15,15,15,0,0,0,16,16,0,FALSE,FALSE,FALSE
+6,"A",27,"F","X","Heifer","2.5","M","NP","NA","NA",10,8,22,21,12,13,-1,9,14,5,TRUE,FALSE,TRUE
+6,"A",28,"F","X","Heifer","2.75","M","NP","NA","NA",13,10,18,17,5,7,-2,11,17,6,TRUE,FALSE,TRUE
+6,"A",29,"F","X","Adult","9","M","NP","10","4",14,13,14,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+7,"A",30,"F","X","Heifer","2.5","M","NP","NA","NA",12,11,12,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+7,"A",31,"F","X","Adult","4","M","NP","10","1",16,14,21,22,5,8,-3,14,20,6,TRUE,FALSE,TRUE
+7,"A",32,"F","X","Adult","13","M","P (8m)","4.5","6",16,14,23,26,7,12,-5,17,21,4,TRUE,FALSE,TRUE
+7,"A",33,"F","X","Adult","7","M","P (2m)","7","3",16,15,16,15,0,0,0,17,17,0,FALSE,FALSE,FALSE
+8,"A",34,"F","X","Adult","6","M","P (2m)","17","3",20,17,21,17,0,0,0,20,20,0,FALSE,FALSE,FALSE
+8,"A",35,"F","X","Adult","6.5","M","P (7m)","NA","3",21,20,22,20,0,0,0,21,22,1,FALSE,FALSE,FALSE
+8,"A",36,"F","X","Adult","5","M","P (7m)","4","2",19,18,19,19,0,0,0,19,19,0,FALSE,FALSE,FALSE
+8,"A",37,"F","X","Adult","12","M","NP","18","5",15,13,16,14,1,1,0,15,19,4,FALSE,FALSE,TRUE
+8,"A",38,"F","X","Adult","4","M","P (6m)","NA","3",19,17,20,18,1,1,0,19,19,0,FALSE,FALSE,FALSE
+8,"A",39,"F","X","Adult","8","M","P (4m)","7","4",15,12,17,12,2,0,2,15,15,0,FALSE,FALSE,FALSE
+8,"A",40,"F","X","Adult","8","M","P (6m)","NA","4",16,14,16,14,0,0,0,14,14,0,FALSE,FALSE,FALSE
+8,"A",41,"F","X","Adult","8","M","P (7m)","NA","4",15,12,22,19,7,7,0,14,15,1,TRUE,FALSE,FALSE
+8,"A",42,"F","X","Adult","12.5","M","P (4m)","8","5",18,16,18,16,0,0,0,18,18,0,FALSE,FALSE,FALSE
+8,"A",43,"F","X","Adult","6","M","P (2m)","8","3",19,15,21,18,2,3,-1,15,17,2,FALSE,FALSE,TRUE
+8,"A",44,"F","X","Adult","12","M","NP","6","5",16,15,16,15,0,0,0,16,16,0,FALSE,FALSE,FALSE
+8,"A",45,"F","X","Adult","12.5","M","P (5m)","8","5",15,12,17,15,2,3,-1,16,16,0,FALSE,FALSE,FALSE
+8,"A",46,"F","X","Adult","7","M","P (1m)","14","3",14,12,15,15,1,3,-2,14,16,2,FALSE,FALSE,TRUE
+8,"A",47,"F","X","Adult","3.75","M","P (3m)","NA","NA",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+8,"A",48,"F","X","Calf","6m","M","NP","NA","NA",9,9,9,9,0,0,0,7,9,2,FALSE,FALSE,TRUE
+8,"A",49,"F","X","Calf","8m","M","NP","NA","NA",9,7,9,7,0,0,0,9,9,0,FALSE,FALSE,FALSE
+8,"A",50,"F","X","Calf","11m","M","NP","NA","NA",9,8,9,8,0,0,0,9,9,0,FALSE,FALSE,FALSE
+8,"A",51,"F","X","Heifer","2.5","M","NP","NA","NA",16,15,20,17,4,2,2,16,17,1,TRUE,FALSE,FALSE
+8,"A",52,"F","X","Calf","8m","M","NP","NA","NA",7,5,7,5,0,0,0,7,8,1,FALSE,FALSE,FALSE
+8,"A",53,"F","X","Calf","6m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+8,"A",54,"F","X","Calf","10m","M","NP","NA","NA",7,6,8,6,1,0,1,7,7,0,FALSE,FALSE,FALSE
+8,"A",55,"F","X","Calf","11m","M","NP","NA","NA",5,4,6,5,1,1,0,5,6,1,FALSE,FALSE,FALSE
+9,"A",56,"F","X","Adult","12","M","NP","12","5",17,15,20,22,3,7,-4,17,17,0,FALSE,FALSE,FALSE
+9,"A",57,"F","X","Adult","9","M","P (1m)","13","4",17,14,19,15,2,1,1,17,17,0,FALSE,FALSE,FALSE
+9,"A",58,"F","X","Adult","9.5","M","P (3m)","8","4",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+9,"A",59,"F","X","Adult","7","M","P (1m)","12","3",20,18,20,18,0,0,0,20,20,0,FALSE,FALSE,FALSE
+9,"A",60,"F","X","Adult","9","M","P (3m)","8","4",15,13,15,16,0,3,-3,15,15,0,FALSE,FALSE,FALSE
+9,"A",61,"F","X","Adult","9.25","M","NP","14","4",13,13,16,16,3,3,0,13,14,1,FALSE,FALSE,FALSE
+9,"A",62,"F","X","Adult","7.5","M","P (1m)","11","3",13,11,14,12,1,1,0,14,14,0,FALSE,FALSE,FALSE
+9,"A",63,"F","X","Adult","9.5","M","P (1m)","7","4",17,13,17,13,0,0,0,16,16,0,FALSE,FALSE,FALSE
+9,"A",64,"F","X","Heifer","2","M","NP","NA","NA",17,15,17,15,0,0,0,17,17,0,FALSE,FALSE,FALSE
+9,"A",65,"F","X","Calf","8m","M","NP","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+9,"A",66,"F","X","Calf","9m","M","NP","NA","NA",7,5,8,6,1,1,0,6,8,2,FALSE,FALSE,TRUE
+9,"A",67,"F","X","Calf","11m","M","NP","NA","NA",7,5,7,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+10,"A",68,"F","X","Adult","9","M","P (7m)","12","4",15,14,18,14,3,0,3,14,15,1,FALSE,FALSE,FALSE
+10,"A",69,"F","X","Adult","11","M","P (3m)","7","5",12,11,12,11,0,0,0,12,13,1,FALSE,FALSE,FALSE
+10,"A",70,"F","X","Adult","14","M","P (3m)","8","7",13,11,20,15,7,4,3,13,14,1,TRUE,FALSE,FALSE
+10,"A",71,"F","X","Adult","13","M","P (2m)","6","6",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+10,"A",72,"F","X","Adult","5.5","M","P (7m)","10","2",11,9,17,9,6,0,6,11,11,0,TRUE,TRUE,FALSE
+10,"A",73,"F","X","Adult","10","M","P (2m)","8","4",12,10,14,10,2,0,2,12,13,1,FALSE,FALSE,FALSE
+10,"A",74,"F","X","Heifer","2.5","M","NP","NA","NA",7,5,11,5,4,0,4,6,6,0,TRUE,TRUE,FALSE
+10,"A",75,"F","X","Calf","11m","M","NP","NA","NA",6,5,6,5,0,0,0,5,5,0,FALSE,FALSE,FALSE
+11,"A",76,"F","X","Adult","7","M","P (3m)","21","3",23,20,23,23,3,3,0,23,23,0,FALSE,FALSE,FALSE
+11,"A",77,"F","X","Adult","9","M","P (4m)","16","4",18,16,23,16,5,0,5,19,19,0,TRUE,TRUE,FALSE
+11,"A",78,"F","X","Adult","15","M","P (7m)","12","7",17,15,17,15,0,0,0,17,17,0,FALSE,FALSE,FALSE
+11,"A",79,"F","X","Adult","17","M","P (7m)","19","8",20,18,20,18,0,0,0,20,20,0,FALSE,FALSE,FALSE
+11,"A",80,"F","X","Adult","6","M","P (2m)","14","2",16,14,22,16,6,2,4,16,16,0,TRUE,TRUE,FALSE
+11,"A",81,"F","X","Heifer","2","M","NP","NA","NA",10,8,14,16,4,8,-4,10,10,0,TRUE,FALSE,FALSE
+11,"A",82,"F","X","Adult","13","M","P (7m)","17","7",17,15,19,19,2,4,-2,17,20,3,FALSE,FALSE,TRUE
+11,"A",83,"F","X","Adult","14","M","P (7m)","15","7",17,16,20,21,3,5,-2,17,17,0,FALSE,FALSE,FALSE
+11,"A",84,"F","X","Adult","11","M","P (5m)","11","5",16,13,18,15,2,2,0,16,16,0,FALSE,FALSE,FALSE
+11,"A",85,"F","X","Adult","15","M","P (7m)","7","7",18,17,18,17,0,0,0,18,18,0,FALSE,FALSE,FALSE
+11,"A",86,"F","X","Heifer","2","M","NP","NA","NA",15,12,15,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+11,"A",87,"F","X","Calf","8m","M","NP","NA","NA",9,8,9,8,0,0,0,9,9,0,FALSE,FALSE,FALSE
+11,"A",88,"F","X","Calf","7m","M","NP","NA","NA",7,6,10,8,3,2,1,7,7,0,FALSE,FALSE,FALSE
+11,"A",89,"F","X","Calf","11m","M","NP","NA","NA",8,7,8,7,0,0,0,8,8,0,FALSE,FALSE,FALSE
+12,"A",90,"F","X","Adult","7","M","P (7m)","15","3",16,14,19,15,3,1,2,16,16,0,FALSE,FALSE,FALSE
+12,"A",91,"F","X","Adult","4","M","P (6m)","12","1",15,12,15,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+12,"A",92,"F","X","Adult","5.5","M","P (6m)","14","2",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+12,"A",93,"F","X","Adult","3.5","M","P (3m)","11","1",13,11,18,14,5,3,2,13,13,0,TRUE,FALSE,FALSE
+12,"A",94,"F","X","Heifer","2","M","NP","NA","NA",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+12,"A",95,"F","X","Heifer","2.5","M","NP","NA","NA",14,9,14,11,0,2,-2,15,15,0,FALSE,FALSE,FALSE
+12,"A",96,"F","X","Heifer","3","M","NP","NA","NA",13,11,13,12,0,1,-1,13,13,0,FALSE,FALSE,FALSE
+12,"A",97,"F","X","Heifer","2","M","NP","NA","NA",10,8,11,9,1,1,0,10,10,0,FALSE,FALSE,FALSE
+12,"A",98,"F","X","Heifer","1.5","M","NP","NA","NA",11,9,11,9,0,0,0,11,11,0,FALSE,FALSE,FALSE
+12,"A",99,"F","X","Heifer","2","M","NP","NA","NA",10,8,10,9,0,1,-1,10,10,0,FALSE,FALSE,FALSE
+12,"A",100,"F","X","Heifer","1.5","M","NP","NA","NA",10,8,10,8,0,0,0,10,10,0,FALSE,FALSE,FALSE
+12,"A",101,"F","X","Calf","9m","M","NP","NA","NA",8,6,8,6,0,0,0,8,8,0,FALSE,FALSE,FALSE
+12,"A",102,"F","X","Calf","8m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+12,"A",103,"F","X","Heifer","2.5","M","NP","NA","NA",12,10,14,10,2,0,2,12,12,0,FALSE,FALSE,FALSE
+13,"A",104,"F","X","Heifer","1.5","M","NP","NA","NA",24,20,25,21,1,1,0,24,24,0,FALSE,FALSE,FALSE
+13,"A",105,"F","X","Adult","8","M","P (2m)","16","3",16,14,19,18,3,4,-1,16,16,0,FALSE,FALSE,FALSE
+14,"A",106,"F","X","Heifer","2.5","M","NP","NA","NA",9,6,13,8,4,2,-2,9,9,0,TRUE,FALSE,FALSE
+14,"A",107,"F","X","Calf","8m","M","NP","NA","NA",11,9,11,9,0,0,0,11,11,0,FALSE,FALSE,FALSE
+14,"A",108,"F","X","Calf","9m","M","NP","NA","NA",10,8,10,8,0,0,0,10,10,0,FALSE,FALSE,FALSE
+14,"A",109,"F","X","Heifer","1.5","M","NP","NA","NA",13,11,14,12,1,1,0,13,13,0,FALSE,FALSE,FALSE
+15,"A",110,"F","X","Adult","5","M","P (7m)","12","2",19,18,19,18,0,0,0,19,19,0,FALSE,FALSE,FALSE
+15,"A",111,"F","X","Heifer","3","M","P (3m)","NA","NA",18,15,18,16,0,1,-1,18,18,0,FALSE,FALSE,FALSE
+15,"A",112,"F","X","Adult","4","M","P (5m)","8","1",16,13,16,13,0,0,0,16,16,0,FALSE,FALSE,FALSE
+15,"A",113,"F","X","Adult","12","M","P (7m)","14","5",19,17,19,17,0,0,0,19,19,0,FALSE,FALSE,FALSE
+15,"A",114,"F","X","Calf","8m","M","NP","NA","NA",10,8,10,8,0,0,0,10,10,0,FALSE,FALSE,FALSE
+15,"A",115,"F","X","Calf","9m","M","NP","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+16,"A",116,"F","X","Heifer","2.5","M","NP","NA","NA",12,11,12,11,0,0,0,12,12,0,FALSE,FALSE,FALSE
+16,"A",117,"F","X","Calf","8m","M","NP","NA","NA",9,7,9,7,0,0,0,9,9,0,FALSE,FALSE,FALSE
+16,"A",118,"F","X","Heifer","2.25","M","NP","NA","NA",15,12,15,13,0,1,-1,15,15,0,FALSE,FALSE,FALSE
+16,"A",119,"F","X","Calf","6m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+16,"A",120,"F","X","Heifer","2","M","NP","NA","NA",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+16,"A",121,"F","X","Heifer","2.5","M","NP","NA","NA",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+16,"A",122,"F","X","Heifer","3","M","NP","NA","NA",9,7,9,7,0,0,0,9,9,0,FALSE,FALSE,FALSE
+16,"A",123,"F","X","Heifer","2.5","M","NP","NA","NA",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+16,"A",124,"F","X","Heifer","2.25","M","NP","NA","NA",15,12,16,13,1,1,0,15,15,0,FALSE,FALSE,FALSE
+16,"A",125,"F","X","Heifer","2.5","M","NP","NA","NA",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+16,"A",126,"F","X","Heifer","2.5","M","NP","NA","NA",17,14,21,19,4,5,-1,17,17,0,TRUE,FALSE,FALSE
+16,"A",127,"F","X","Heifer","2.5","M","NP","NA","NA",11,9,11,9,0,0,0,11,11,0,FALSE,FALSE,FALSE
+16,"A",128,"F","X","Heifer","2.5","M","NP","NA","NA",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+16,"A",129,"F","X","Adult","13","M","P (4m)","3","6",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+16,"A",130,"F","X","Heifer","2.5","M","NP","NA","NA",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+16,"A",131,"F","X","Heifer","2.5","M","NP","NA","NA",11,9,11,9,0,0,0,11,11,0,FALSE,FALSE,FALSE
+16,"A",132,"F","X","Heifer","2","M","NP","NA","NA",10,8,10,8,0,0,0,10,10,0,FALSE,FALSE,FALSE
+16,"A",133,"F","X","Heifer","2.25","M","NP","NA","NA",12,10,14,12,2,2,0,12,12,0,FALSE,FALSE,FALSE
+16,"A",134,"F","X","Calf","8m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+16,"A",135,"F","X","Calf","7m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+16,"A",136,"F","X","Heifer","2","M","NP","NA","NA",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+16,"A",137,"F","X","Heifer","2.5","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+16,"A",138,"F","X","Heifer","2.25","M","NP","NA","NA",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+16,"A",139,"F","X","Calf","10m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+16,"A",140,"F","X","Calf","11m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+16,"A",141,"F","X","Calf","9m","M","NP","NA","NA",9,7,9,7,0,0,0,9,9,0,FALSE,FALSE,FALSE
+16,"A",142,"F","X","Heifer","2.5","M","NP","NA","NA",14,12,15,14,0,2,-2,14,14,0,FALSE,FALSE,FALSE
+16,"A",143,"F","X","Heifer","2.5","M","NP","NA","NA",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+16,"A",144,"F","X","Calf","11m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+16,"A",145,"F","X","Calf","10m","M","NP","NA","NA",8,6,8,6,0,0,0,8,8,0,FALSE,FALSE,FALSE
+17,"A",146,"F","X","Adult","9","M","P (4m)","18","4",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+17,"A",147,"F","X","Adult","4.5","M","P (6m)","12","1",15,12,15,12,0,0,0,15,15,0,FALSE,FALSE,FALSE
+17,"A",148,"F","X","Adult","6","M","NP","7","2",10,8,10,8,0,0,0,10,10,0,FALSE,FALSE,FALSE
+17,"A",149,"F","X","Adult","9","M","NP","8","4",12,10,12,13,0,3,-3,12,12,0,FALSE,FALSE,FALSE
+17,"A",150,"F","X","Adult","7","M","NP","9","3",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+17,"A",151,"F","X","Adult","9.5","M","P (5m)","8","4",17,15,17,15,0,0,0,17,17,0,FALSE,FALSE,FALSE
+17,"A",152,"F","X","Adult","9.5","M","P (5m)","8","4",15,13,16,20,1,7,-6,15,15,0,FALSE,FALSE,FALSE
+17,"A",153,"F","X","Adult","10","M","NP","10","4",16,14,17,16,1,2,-1,16,16,0,FALSE,FALSE,FALSE
+17,"A",154,"F","X","Adult","7","M","P (1m)","10","3",17,15,17,16,0,1,-1,17,17,0,FALSE,FALSE,FALSE
+17,"A",155,"F","X","Adult","7","M","P (6m)","4","3",15,13,22,21,7,8,-1,15,15,0,TRUE,FALSE,FALSE
+17,"A",156,"F","X","Adult","7","M","P (6m)","6","3",20,19,23,20,3,1,2,20,20,0,FALSE,FALSE,FALSE
+17,"A",157,"F","X","Calf","7m","M","NP","NA","NA",6,5,8,10,2,5,-3,6,6,0,FALSE,FALSE,FALSE
+17,"A",158,"F","X","Calf","6m","M","NP","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+17,"A",159,"F","X","Heifer","2","M","NP","NA","NA",10,8,10,8,0,0,0,10,10,0,FALSE,FALSE,FALSE
+17,"A",160,"F","X","Calf","8m","M","NP","NA","NA",8,6,8,6,0,0,0,8,8,0,FALSE,FALSE,FALSE
+17,"A",161,"F","X","Adult","4","M","NP","12","1",18,15,19,16,1,1,0,18,18,0,FALSE,FALSE,FALSE
+17,"A",162,"F","X","Adult","9.5","M","P (5m)","NA","4",17,16,17,16,0,0,0,18,18,0,FALSE,FALSE,FALSE
+17,"A",163,"F","X","Adult","10","M","NP","12","4",17,16,17,17,0,1,-1,18,18,0,FALSE,FALSE,FALSE
+17,"A",164,"F","X","Adult","14","M","NP","14","7",18,15,19,21,1,6,-5,18,18,0,FALSE,FALSE,FALSE
+17,"A",165,"F","X","Adult","13","M","NP","10","5",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+17,"A",166,"F","X","Adult","7","M","NP","14","3",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+17,"A",167,"F","X","Adult","6","M","NP","6","2",17,16,17,17,0,0,0,17,17,0,FALSE,FALSE,FALSE
+17,"A",168,"F","X","Adult","7","M","P (6m)","16","3",18,16,18,16,0,0,0,18,18,0,FALSE,FALSE,FALSE
+17,"A",326,"F","X","Adult","6.5","M","P (6m)","NA","3",14,13,14,13,0,0,0,14,14,0,FALSE,FALSE,FALSE
+17,"A",169,"F","X","Adult","5","M","P (5m)","NA","2",15,13,15,14,0,1,-1,15,15,0,FALSE,FALSE,FALSE
+17,"A",170,"F","X","Adult","7","M","P (4m)","7","3",18,16,18,16,0,0,0,18,18,0,FALSE,FALSE,FALSE
+17,"A",171,"F","X","Adult","6","M","P (5m)","6","3",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+17,"A",172,"F","X","Calf","6m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+18,"A",173,"F","X","Adult","5","M","NP","5","2",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+18,"A",174,"F","X","Adult","11","M","P (3m)","12","5",14,12,16,18,2,6,-4,14,14,0,FALSE,FALSE,FALSE
+18,"A",175,"F","X","Heifer","2.5","M","NP","NA","NA",15,12,15,12,0,0,0,15,15,0,FALSE,FALSE,FALSE
+18,"A",176,"F","X","Adult","5.5","M","NP","0","2",15,12,15,12,0,0,0,15,15,0,FALSE,FALSE,FALSE
+18,"A",177,"F","X","Calf","8m","M","NP","NA","NA",5,4,5,4,0,0,0,5,5,0,FALSE,FALSE,FALSE
+19,"A",178,"F","Y","Calf","7m","M","NP","NA","NA",5,4,5,7,0,3,-3,5,5,0,FALSE,FALSE,FALSE
+19,"A",179,"F","Y","Calf","8m","M","NP","NA","NA",9,8,9,8,0,0,0,9,9,0,FALSE,FALSE,FALSE
+19,"A",180,"F","Y","Calf","7m","M","NP","NA","NA",6,5,6,6,0,1,0,6,6,0,FALSE,FALSE,FALSE
+19,"A",181,"F","Y","Calf","6m","M","NP","NA","NA",6,5,9,12,3,7,-4,6,6,0,FALSE,FALSE,FALSE
+19,"A",182,"F","Y","Calf","7m","M","NP","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+19,"A",183,"F","Y","Calf","7m","M","NP","NA","NA",8,6,8,6,0,0,0,8,8,0,FALSE,FALSE,FALSE
+19,"A",184,"F","Y","Calf","6m","M","NP","NA","NA",8,7,8,7,0,0,0,8,8,0,FALSE,FALSE,FALSE
+19,"A",185,"F","Y","Calf","7m","M","NP","NA","NA",9,7,9,7,0,0,0,9,9,0,FALSE,FALSE,FALSE
+19,"A",186,"F","Y","Calf","8m","M","NP","NA","NA",8,6,8,11,0,5,-5,8,8,0,FALSE,FALSE,FALSE
+19,"A",187,"F","Y","Adult","8","M","P (1m)","15","3",17,16,17,16,0,0,0,17,17,0,FALSE,FALSE,FALSE
+19,"A",188,"F","Y","Adult","9","M","P (1m)","16","4",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+19,"A",189,"F","Y","Adult","9.5","M","NP","12","4",15,15,15,15,0,0,0,15,15,0,FALSE,FALSE,FALSE
+19,"A",190,"F","Y","Adult","8","M","NP","12","3",17,16,17,15,0,0,0,17,17,0,FALSE,FALSE,FALSE
+19,"A",191,"F","Y","Adult","7.5","M","NP","13","3",20,18,20,18,0,0,0,20,20,0,FALSE,FALSE,FALSE
+19,"A",192,"F","Y","Adult","7","M","P (5m)","12","3",18,17,18,17,0,0,0,18,18,0,FALSE,FALSE,FALSE
+19,"A",193,"F","Y","Adult","9.5","M","P (4m)","4","4",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+19,"A",194,"F","Y","Adult","5","M","P (2m)","3","2",15,14,15,14,0,0,0,15,15,0,FALSE,FALSE,FALSE
+19,"A",195,"F","Y","Adult","9","M","P (4m)","10","4",15,13,15,14,0,1,-1,15,15,0,FALSE,FALSE,FALSE
+19,"A",196,"F","Y","Adult","8","M","P (3m)","10","3",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+19,"A",197,"F","Y","Calf","6m","M","NP","NA","NA",5,4,5,5,0,0,0,5,5,0,FALSE,FALSE,FALSE
+19,"A",198,"F","Y","Calf","7m","M","NP","NA","NA",4,3,4,5,0,2,-2,4,4,0,FALSE,FALSE,FALSE
+20,"A",199,"F","Y","Adult","3.5","M","P (3m)","9","1",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+20,"A",200,"F","Y","Adult","3.5","M","NP","12","1",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+20,"A",201,"F","Y","Adult","8","M","P (3m)","13","4",15,15,21,20,6,5,1,15,15,0,TRUE,FALSE,FALSE
+20,"A",202,"F","Y","Adult","13","M","P (2m)","14","6",14,13,14,13,0,0,0,14,14,0,FALSE,FALSE,FALSE
+20,"A",203,"F","Y","Adult","4","M","P (2m)","8","1",12,10,14,16,2,6,-4,12,12,0,FALSE,FALSE,FALSE
+20,"A",204,"F","Y","Adult","9","M","NP","14","4",14,13,14,13,0,0,0,14,14,0,FALSE,FALSE,FALSE
+20,"A",205,"F","Y","Adult","8.5","M","NP","10","4",16,15,16,15,0,0,0,16,16,0,FALSE,FALSE,FALSE
+20,"A",206,"F","Y","Heifer","2.5","M","NP","NA","NA",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+20,"A",207,"F","Y","Heifer","2","M","NP","NA","NA",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+20,"A",208,"F","Y","Heifer","2.5","M","NP","NA","NA",15,12,15,12,0,0,0,15,15,0,FALSE,FALSE,FALSE
+20,"A",209,"F","Y","Heifer","2","M","NP","NA","NA",11,9,11,9,0,0,0,11,11,0,FALSE,FALSE,FALSE
+20,"A",210,"F","Y","Heifer","2.5","M","NP","NA","NA",13,12,13,12,0,0,0,13,13,0,FALSE,FALSE,FALSE
+20,"A",211,"F","Y","Heifer","1.5","M","NP","NA","NA",11,8,11,8,0,0,0,11,11,0,FALSE,FALSE,FALSE
+20,"A",212,"F","Y","Heifer","2","M","NP","NA","NA",15,14,15,14,0,0,0,15,15,0,FALSE,FALSE,FALSE
+20,"A",213,"F","Y","Heifer","2.5","M","NP","NA","NA",5,4,5,4,0,0,0,5,5,0,FALSE,FALSE,FALSE
+20,"A",214,"F","Y","Heifer","1.5","M","NP","NA","NA",6,5,6,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+20,"A",215,"F","Y","Heifer","2","M","NP","NA","NA",6,5,6,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+20,"A",216,"F","Y","Heifer","3","M","NP","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+20,"A",217,"F","Y","Heifer","2.5","M","NP","NA","NA",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+20,"A",218,"F","Y","Calf","6m","M","NP","NA","NA",6,6,6,6,0,0,0,6,6,0,FALSE,FALSE,FALSE
+20,"A",219,"F","Y","Calf","7m","M","NP","NA","NA",6,5,6,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+20,"A",220,"F","Y","Calf","7m","M","NP","NA","NA",5,4,5,4,0,0,0,5,5,0,FALSE,FALSE,FALSE
+20,"A",221,"F","Y","Calf","6m","M","NP","NA","NA",8,6,8,6,0,0,0,8,8,0,FALSE,FALSE,FALSE
+20,"A",222,"F","Y","Adult","6","M","P (1m)","6","2",15,14,18,19,3,5,-2,15,16,1,FALSE,FALSE,FALSE
+20,"A",223,"F","Y","Adult","5.5","M","NP","8","2",16,15,16,15,0,0,0,16,16,0,FALSE,FALSE,FALSE
+20,"A",224,"F","Y","Adult","8.5","M","P (3m)","NA","4",17,15,22,19,5,4,1,17,17,0,TRUE,FALSE,FALSE
+20,"A",225,"F","Y","Adult","8.5","M","P (3m)","NA","4",12,11,18,18,6,7,-1,12,14,2,TRUE,FALSE,TRUE
+20,"A",226,"F","Y","Adult","6","M","NP","10","3",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+20,"A",227,"F","Y","Adult","5.5","M","P (4m)","10","2",16,14,18,16,2,2,0,16,16,0,FALSE,FALSE,FALSE
+20,"A",228,"F","Y","Adult","6","M","P (5m)","8","3",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+20,"A",229,"F","Y","Adult","8","M","P (6m)","10","4",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+20,"A",230,"F","Y","Calf","6m","M","NP","NA","NA",5,4,5,4,0,0,0,5,5,0,FALSE,FALSE,FALSE
+20,"A",231,"F","Y","Calf","7m","M","NP","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+20,"A",232,"F","Y","Calf","8m","M","NP","NA","NA",7,6,7,6,0,0,0,7,7,0,FALSE,FALSE,FALSE
+20,"A",233,"F","Y","Calf","6m","M","NP","NA","NA",7,6,7,6,0,0,0,7,7,0,FALSE,FALSE,FALSE
+21,"A",234,"F","X","Heifer","3","M","NP","NA","NA",17,13,17,13,0,0,0,17,17,0,FALSE,FALSE,FALSE
+21,"A",235,"F","X","Heifer","3","M","NP","NA","NA",13,12,13,12,0,0,0,13,13,0,FALSE,FALSE,FALSE
+21,"A",236,"F","X","Adult","13","M","NP","10","6",19,17,20,21,1,4,-3,19,19,0,FALSE,FALSE,FALSE
+21,"A",237,"F","X","Adult","5","M","NP","5","1",15,14,15,14,0,0,0,15,15,0,FALSE,FALSE,FALSE
+21,"A",238,"F","X","Heifer","3","M","NP","NA","NA",14,11,14,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+22,"A",239,"F","X","Heifer","3.5","M","NP","NA","NA",15,12,15,12,0,0,0,15,15,0,FALSE,FALSE,FALSE
+22,"A",240,"F","X","Heifer","3.5","M","NP","NA","NA",15,12,15,15,0,0,0,15,15,0,FALSE,FALSE,FALSE
+22,"A",241,"F","X","Heifer","3.5","M","NP","NA","NA",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+22,"A",242,"F","X","Heifer","4","M","P (4m)","NA","NA",12,11,12,11,0,0,0,12,12,0,FALSE,FALSE,FALSE
+22,"A",243,"F","X","Heifer","4","M","P (4m)","NA","NA",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+22,"A",244,"F","X","Heifer","3.5","M","NP","NA","NA",16,13,22,19,6,6,0,16,16,0,TRUE,FALSE,FALSE
+22,"A",245,"F","X","Adult","5","M","P (5m)","8","1",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+22,"A",246,"F","X","Adult","4","M","NP","7","1",15,13,17,18,2,5,-3,15,15,0,FALSE,FALSE,FALSE
+22,"A",247,"F","X","Adult","4","M","P (1m)","10","1",16,13,18,19,2,6,-4,16,17,1,FALSE,FALSE,FALSE
+22,"A",248,"F","X","Heifer","2.5","M","NP","NA","NA",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+23,"A",249,"F","X","Adult","13","M","NP","11","7",15,14,15,14,0,0,0,15,15,0,FALSE,FALSE,FALSE
+23,"A",250,"F","X","Adult","15","M","NP","10","9",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+23,"A",251,"F","X","Adult","9","M","NP","14","4",19,17,19,19,0,2,-2,19,19,0,FALSE,FALSE,FALSE
+23,"A",252,"F","X","Calf","7m","M","NP","NA","NA",7,6,7,7,0,1,-1,7,7,0,FALSE,FALSE,FALSE
+23,"A",253,"F","X","Heifer","2.5","M","NP","NA","NA",10,8,12,8,2,0,2,10,10,0,FALSE,FALSE,FALSE
+23,"A",254,"F","X","Heifer","2.5","M","NP","NA","NA",15,12,15,12,0,0,0,15,15,0,FALSE,FALSE,FALSE
+23,"A",255,"F","X","Heifer","3","M","NP","NA","NA",15,10,16,10,1,0,1,15,15,0,FALSE,FALSE,FALSE
+23,"A",256,"F","X","Heifer","3","M","NP","NA","NA",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+24,"A",257,"F","Y","Calf","7m","M","NP","NA","NA",5,5,5,5,0,0,0,5,5,0,FALSE,FALSE,FALSE
+24,"A",258,"F","Y","Calf","8m","M","NP","NA","NA",8,6,8,6,0,0,0,8,8,0,FALSE,FALSE,FALSE
+24,"A",259,"F","Y","Calf","7m","M","NP","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+24,"A",260,"F","Y","Calf","9m","M","NP","NA","NA",5,4,5,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+24,"A",261,"F","Y","Calf","8m","M","NP","NA","NA",6,4,6,4,0,0,0,5,5,0,FALSE,FALSE,FALSE
+24,"A",262,"F","Y","Calf","7m","M","NP","NA","NA",5,4,5,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+24,"A",263,"F","Y","Calf","8m","M","NP","NA","NA",5,4,5,4,0,0,0,5,5,0,FALSE,FALSE,FALSE
+24,"A",264,"F","Y","Calf","11m","M","NP","NA","NA",5,4,5,4,0,0,0,5,5,0,FALSE,FALSE,FALSE
+24,"A",265,"F","Y","Calf","8m","M","NP","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+24,"A",266,"F","Y","Calf","8m","M","NP","NA","NA",5,4,5,4,0,0,0,5,5,0,FALSE,FALSE,FALSE
+24,"A",267,"F","Y","Adult","8.5","M","NP","10","4",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+24,"A",268,"F","Y","Adult","9","M","NP","10","4",14,13,14,13,0,0,0,14,14,0,FALSE,FALSE,FALSE
+24,"A",269,"F","Y","Calf","6m","M","NP","NA","NA",6,5,6,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+25,"A",270,"F","X","Adult","7","M","P (3m)","8","3",18,16,20,17,2,1,1,18,18,0,FALSE,FALSE,FALSE
+25,"A",271,"F","X","Heifer","2.5","M","NP","NA","NA",19,16,19,16,0,0,0,19,19,0,FALSE,FALSE,FALSE
+25,"A",272,"F","X","Adult","7","M","NP","8","3",15,13,16,15,1,2,-1,15,15,0,FALSE,FALSE,FALSE
+25,"A",273,"F","X","Adult","5.5","M","P (2m)","8","2",16,14,21,19,5,5,0,16,16,0,TRUE,FALSE,FALSE
+25,"A",274,"F","X","Adult","9","M","NP","10","4",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+25,"A",275,"F","X","Adult","7","M","P (4m)","10","3",20,18,20,18,0,0,0,20,20,0,FALSE,FALSE,FALSE
+25,"A",276,"F","X","Adult","6","M","NP","10","2",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+25,"A",277,"F","X","Adult","7","M","NP","10","3",12,10,12,14,0,4,-4,12,12,0,FALSE,FALSE,FALSE
+25,"A",278,"F","X","Adult","6","M","NP","8","2",16,13,22,16,6,3,3,16,16,0,TRUE,FALSE,FALSE
+26,"A",279,"F","X","Adult","12","M","P (5m)","NA","5",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+27,"A",280,"F","X","Adult","3.5","M","NP","12","1",18,16,19,16,1,0,1,18,18,0,FALSE,FALSE,FALSE
+27,"A",281,"F","X","Adult","5","M","P (1m)","13","2",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+27,"A",282,"F","X","Adult","5","M","P (1m)","14","2",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+28,"A",283,"F","X","Adult","14","M","P (5m)","16","5",15,14,16,15,1,1,0,15,15,0,FALSE,FALSE,FALSE
+28,"A",284,"F","X","Adult","5","M","P (4m)","10","2",18,16,18,16,0,0,0,18,18,0,FALSE,FALSE,FALSE
+28,"A",285,"F","X","Adult","5","M","P (3m)","12","2",18,14,20,16,2,2,0,18,18,0,FALSE,FALSE,FALSE
+28,"A",286,"F","X","Adult","5","M","P (3m)","14","2",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+28,"A",287,"F","X","Adult","8","M","P (2m)","14","3",18,16,18,16,0,0,0,18,18,0,FALSE,FALSE,FALSE
+28,"A",288,"F","X","Adult","8","M","P (4m)","15","3",15,12,15,12,0,0,0,15,15,0,FALSE,FALSE,FALSE
+28,"A",289,"F","X","Adult","8","M","P (3m)","18","3",17,15,20,18,3,3,0,17,17,0,FALSE,FALSE,FALSE
+28,"A",290,"F","X","Adult","8","M","P (2m)","19","3",15,12,15,12,0,0,0,15,15,0,FALSE,FALSE,FALSE
+28,"A",291,"F","X","Calf","6m","M","NP","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+29,"A",292,"F","Y","Adult","5","M","P (3m)","17","2",16,14,14,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+29,"A",293,"F","Y","Calf","6m","M","NP","NA","NA",6,5,6,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+29,"A",294,"F","Y","Calf","8m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+29,"A",295,"F","Y","Calf","8m","M","NP","NA","NA",8,6,8,6,0,0,0,8,8,0,FALSE,FALSE,FALSE
+29,"A",296,"F","Y","Calf","11m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+30,"A",297,"F","X","Adult","8","M","P (1m)","15","3",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+30,"A",298,"F","X","Adult","8","M","P (2m)","16","3",20,15,20,15,0,0,0,20,20,0,FALSE,FALSE,FALSE
+30,"A",299,"F","X","Calf","7m","M","NP","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+30,"A",300,"F","X","Calf","9m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+30,"A",301,"F","X","Adult","4.5","M","NP","12","1",17,16,22,21,5,5,0,17,17,0,TRUE,FALSE,FALSE
+30,"A",302,"F","X","Adult","4","M","NP","8","1",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+30,"A",303,"F","X","Adult","5","M","NP","NA","2",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+30,"A",304,"F","X","Adult","12","M","P (3m)","8","5",11,10,11,10,0,0,0,11,11,0,FALSE,FALSE,FALSE
+30,"A",305,"F","X","Adult","12","M","P (1m)","8","5",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+30,"A",306,"F","X","Adult","3.5","M","NP","7","1",12,10,15,13,3,3,0,12,12,0,FALSE,FALSE,FALSE
+30,"A",307,"F","X","Adult","12","M","P (3m)","8","5",13,11,13,14,0,3,-3,13,13,0,FALSE,FALSE,FALSE
+31,"A",308,"F","X","Adult","5","M","P (2m)","15","2",12,12,12,12,0,0,0,12,12,0,FALSE,FALSE,FALSE
+31,"A",309,"F","X","Adult","9","M","P (2m)","15","4",14,13,14,13,0,0,0,14,14,0,FALSE,FALSE,FALSE
+31,"A",310,"F","X","Adult","14","M","P (3m)","20","7",13,12,13,12,0,0,0,13,13,0,FALSE,FALSE,FALSE
+31,"A",311,"F","X","Adult","12","M","P (4m)","19","5",13,12,13,12,0,0,0,13,13,0,FALSE,FALSE,FALSE
+31,"A",312,"F","X","Adult","8","M","NP","16","3",15,13,17,15,2,2,0,15,15,0,FALSE,FALSE,FALSE
+31,"A",313,"F","X","Adult","9","M","P (1m)","17","4",15,14,15,14,0,0,0,15,15,0,FALSE,FALSE,FALSE
+31,"A",314,"F","X","Adult","12","M","P(7m)","17","5",12,12,12,12,0,0,0,12,12,0,FALSE,FALSE,FALSE
+31,"A",315,"F","X","Adult","9","M","P (4m)","15","4",16,15,16,15,0,0,0,16,16,0,FALSE,FALSE,FALSE
+32,"A",316,"F","X","Adult","7","M","NP","14","3",13,10,15,12,2,2,0,13,13,0,FALSE,FALSE,FALSE
+32,"A",317,"F","X","Adult","7","M","NP","14","3",14,13,14,13,0,0,0,14,14,0,FALSE,FALSE,FALSE
+32,"A",318,"F","X","Adult","16","M","NP","17","9",16,16,16,16,0,0,0,16,16,0,FALSE,FALSE,FALSE
+32,"A",319,"F","X","Adult","15","M","NP","12","7",12,12,14,12,2,0,2,12,12,0,FALSE,FALSE,FALSE
+32,"A",320,"F","X","Adult","3.5","M","NP","11","1",16,15,16,15,0,0,0,16,16,0,FALSE,FALSE,FALSE
+32,"A",321,"F","X","Adult","12","M","P (2m)","18","5",15,14,15,14,0,0,0,15,15,0,FALSE,FALSE,FALSE
+32,"A",322,"F","X","Adult","4","M","NP","16","1",12,13,12,13,0,0,0,12,12,0,FALSE,FALSE,FALSE
+32,"A",323,"F","X","Adult","7","M","P (4m)","14","2",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+32,"A",324,"F","X","Adult","6","M","P (5m)","15","2",18,16,18,16,0,0,0,18,18,0,FALSE,FALSE,FALSE
+32,"A",325,"F","X","Adult","9","M","NP","11","4",14,13,14,13,0,0,0,14,14,0,FALSE,FALSE,FALSE
+33,"B",327,"F","X","Adult","7","M","NP","10","3rd",17,15,17,16,0,1,-1,16,17,1,FALSE,FALSE,FALSE
+33,"B",328,"F","X","Adult","4.5","M","P (2m)","8","1st",13,12,13,12,0,0,0,13,13,0,FALSE,FALSE,FALSE
+33,"B",329,"F","X","Calf","6m","M","NP","NA","NA",5,4,5,4,0,0,0,5,5,0,FALSE,FALSE,FALSE
+34,"B",330,"F","X","Adult","6.5","M","NP","12","3",14,12,15,14,1,2,-1,14,14,0,FALSE,FALSE,FALSE
+34,"B",331,"F","X","Adult","6.5","M","NP","12","3",16,15,17,15,1,0,1,15,15,0,FALSE,FALSE,FALSE
+34,"B",332,"F","X","Adult","6.5","M","NP","11","3",16,15,17,17,1,2,-1,19,19,0,FALSE,FALSE,FALSE
+34,"B",333,"F","X","Adult","5","M","NP","14","2",16,16,17,17,1,1,0,16,16,0,FALSE,FALSE,FALSE
+34,"B",334,"F","X","Adult","7.5","M","P (1m)","12","4",17,15,17,15,0,0,0,17,17,0,FALSE,FALSE,FALSE
+34,"B",335,"F","X","Adult","4","M","NP","12","1",15,13,15,13,0,0,0,14,14,0,FALSE,FALSE,FALSE
+34,"B",336,"F","X","Adult","7","M","NP","11","3",14,13,14,17,0,4,-4,14,14,0,FALSE,FALSE,FALSE
+34,"B",337,"F","X","Adult","7","M","P (3m)","14","3",14,13,14,13,0,0,0,14,14,0,FALSE,FALSE,FALSE
+34,"B",338,"F","X","Adult","9","M","P (6m)","4","4",20,18,20,19,0,1,-1,20,20,0,FALSE,FALSE,FALSE
+34,"B",339,"F","X","Adult","5","M","P (3m)","11","2",19,17,19,17,0,0,0,18,18,0,FALSE,FALSE,FALSE
+34,"B",340,"F","X","Adult","4.5","M","P (2m)","9","1",15,12,15,12,0,0,0,15,15,0,FALSE,FALSE,FALSE
+34,"B",341,"F","X","Adult","5","M","NP","12","2",21,19,21,19,0,0,0,20,20,0,FALSE,FALSE,FALSE
+34,"B",342,"F","X","Adult","9","M","NP","10","4",12,11,12,12,0,1,-1,12,12,0,FALSE,FALSE,FALSE
+34,"B",343,"F","X","Adult","5","M","NP","8","2",16,13,16,13,0,0,0,16,16,0,FALSE,FALSE,FALSE
+34,"B",344,"F","X","Heifer","1.5","M","NP","NA","NA",16,12,16,12,0,0,0,16,16,0,FALSE,FALSE,FALSE
+34,"B",345,"F","X","Calf","7m","M","NP","NA","NA",9,6,9,6,0,0,0,9,9,0,FALSE,FALSE,FALSE
+35,"B",346,"F","Y","Adult","4","M","P (1m)","18","1st",18,15,18,15,0,0,0,18,18,0,FALSE,FALSE,FALSE
+35,"B",347,"F","Y","Adult","9","M","P (1m)","16","4th",16,15,16,15,0,0,0,16,16,0,FALSE,FALSE,FALSE
+35,"B",348,"F","Y","Adult","9","M","NP","17","4th",18,16,18,16,0,0,0,18,18,0,FALSE,FALSE,FALSE
+35,"B",349,"F","Y","Adult","8","M","NP","14","3rd",17,15,18,16,1,1,0,18,18,0,FALSE,FALSE,FALSE
+35,"B",350,"F","Y","Adult","5","M","NP","14","2nd",18,15,18,15,0,0,0,18,18,0,FALSE,FALSE,FALSE
+35,"B",351,"F","Y","Adult","8","M","NP","15","3rd",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+35,"B",352,"F","Y","Adult","10","M","NP","10","4th",20,18,20,19,0,1,-1,20,20,0,FALSE,FALSE,FALSE
+35,"B",353,"F","Y","Adult","5","M","P (3m)","8","2nd",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+35,"B",354,"F","Y","Adult","6","M","P (3m)","8","2nd",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+35,"B",355,"F","Y","Adult","5.5","M","NP","12","2nd",19,15,29,26,10,11,-1,17,17,0,TRUE,FALSE,FALSE
+35,"B",356,"F","Y","Adult","6","M","NP","13","2nd",15,13,16,14,1,1,0,15,15,0,FALSE,FALSE,FALSE
+35,"B",357,"F","Y","Adult","20","M","P (7m)","16","9th",24,19,24,19,0,0,0,20,20,0,FALSE,FALSE,FALSE
+35,"B",358,"F","Y","Adult","13","M","P (7m)","14","5th",20,18,20,18,0,0,0,20,20,0,FALSE,FALSE,FALSE
+35,"B",359,"F","Y","Adult","6","M","P (7m)","18","2nd",19,14,23,16,4,2,2,16,16,0,TRUE,FALSE,FALSE
+35,"B",360,"F","Y","Adult","10","M","P (6m)","10","4th",20,18,20,18,0,0,0,20,20,0,FALSE,FALSE,FALSE
+35,"B",361,"F","Y","Adult","5.5","M","P (8m)","10","2nd",20,18,20,18,0,0,0,20,20,0,FALSE,FALSE,FALSE
+35,"B",362,"F","Y","Adult","6.5","M","NP","13","3rd",17,15,17,17,0,0,0,17,17,0,FALSE,FALSE,FALSE
+35,"B",363,"F","Y","Adult","3.5","M","P (4m)","12","1st",25,23,25,23,0,0,0,25,25,0,FALSE,FALSE,FALSE
+35,"B",364,"F","Y","Adult","6","M","NP","14","2nd",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+35,"B",365,"F","Y","Heifer","3","M","NP","NA","NA",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+35,"B",366,"F","Y","Heifer","3","M","NP","NA","NA",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+36,"B",367,"F","X","Heifer","3","M","NP","NA","NA",15,14,15,14,0,0,0,15,15,0,FALSE,FALSE,FALSE
+36,"B",368,"F","X","Adult","7","M","NP","14","3rd",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+36,"B",369,"F","X","Adult","3.5","M","NP","17","1st",15,13,15,13,0,0,0,15,16,1,FALSE,FALSE,FALSE
+36,"B",370,"F","X","Adult","6","M","P (7m)","14","2nd",14,13,14,13,0,0,0,14,15,1,FALSE,FALSE,FALSE
+36,"B",371,"F","X","Adult","6","M","P (7m)","17","2nd",15,13,15,13,0,0,0,15,16,1,FALSE,FALSE,FALSE
+36,"B",372,"F","X","Adult","10","M","P (7m)","11","4th",16,14,16,16,0,2,-2,16,16,0,FALSE,FALSE,FALSE
+36,"B",373,"F","X","Adult","4","M","NP","13","1st",19,17,19,17,0,0,0,19,19,0,FALSE,FALSE,FALSE
+36,"B",374,"F","X","Adult","6","M","NP","15","2nd",17,15,17,15,0,0,0,17,17,0,FALSE,FALSE,FALSE
+36,"B",375,"F","X","Adult","3.5","M","P (1m)","14","1st",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+36,"B",376,"F","X","Adult","7","M","NP","12","3rd",16,14,16,15,0,1,-1,16,17,1,FALSE,FALSE,FALSE
+36,"B",377,"F","X","Adult","6","M","P (2m)","13","2nd",22,20,22,22,0,2,-2,22,23,1,FALSE,FALSE,FALSE
+36,"B",378,"F","X","Adult","6","M","P (7m)","15","2nd",16,14,17,15,1,1,0,16,16,0,FALSE,FALSE,FALSE
+36,"B",379,"F","X","Calf","8m","M","NP","NA","NA",10,8,10,8,0,0,0,10,10,0,FALSE,FALSE,FALSE
+36,"B",380,"F","X","Calf","7m","M","NP","NA","NA",9,7,9,7,0,0,0,9,10,1,FALSE,FALSE,FALSE
+36,"B",381,"F","X","Calf","8m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+36,"B",382,"F","X","Calf","6m","M","NP","NA","NA",9,7,9,7,0,0,0,9,9,0,FALSE,FALSE,FALSE
+36,"B",383,"F","X","Calf","7m","M","NP","NA","NA",7,6,7,6,0,0,0,7,7,0,FALSE,FALSE,FALSE
+36,"B",384,"F","X","Calf","8m","M","NP","NA","NA",8,7,8,7,0,0,0,8,8,0,FALSE,FALSE,FALSE
+37,"B",385,"F","X","Calf","7m","M","NP","NA","NA",5,4,5,4,0,0,0,5,5,0,FALSE,FALSE,FALSE
+37,"B",386,"F","X","Calf","6m","M","NP","NA","NA",6,5,6,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+37,"B",387,"F","X","Calf","7m","M","NP","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+37,"B",388,"F","X","Adult","6","M","NP","7","2nd",15,13,17,15,2,2,0,15,15,0,FALSE,FALSE,FALSE
+37,"B",389,"F","X","Adult","4","M","P (1m)","5","1st",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+37,"B",390,"F","X","Adult","5","M","NP","10","2nd",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+37,"B",391,"F","X","Heifer","2.5","M","NP","NA","NA",10,8,10,8,0,0,0,10,10,0,FALSE,FALSE,FALSE
+37,"B",392,"F","X","Heifer","3","M","NP","NA","NA",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+37,"B",393,"F","X","Heifer","1.5","M","NP","NA","NA",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+37,"B",394,"F","X","Adult","10","M","P (3m)","8","4th",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+37,"B",395,"F","X","Adult","4","M","P (3m)","6","1st",13,11,14,11,1,0,1,13,13,0,FALSE,FALSE,FALSE
+37,"B",396,"F","X","Adult","6","M","NP","11","3rd",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+37,"B",397,"F","X","Adult","3.5","M","P (2m)","7","1st",11,9,12,11,1,2,-1,11,11,0,FALSE,FALSE,FALSE
+37,"B",398,"F","X","Adult","5","M","NP","15","2nd",16,14,17,15,1,1,0,16,16,0,FALSE,FALSE,FALSE
+37,"B",399,"F","X","Adult","5","M","P (2m)","11","2nd",14,12,14,15,0,3,-3,16,16,0,FALSE,FALSE,FALSE
+38,"B",400,"F","X","Adult","4","M","P (2m)","13","1",17,15,20,18,3,3,0,17,17,0,FALSE,FALSE,FALSE
+38,"B",401,"F","X","Heifer","2","M","NP","NA","NA",20,15,20,15,0,0,0,20,20,0,FALSE,FALSE,FALSE
+38,"B",402,"F","X","Calf","6m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+38,"B",403,"F","X","Calf","8m","M","NP","NA","NA",8,6,8,6,0,0,0,8,8,0,FALSE,FALSE,FALSE
+38,"B",404,"F","X","Heifer","3","M","P (3m)","NA","NA",19,17,19,18,0,1,-1,19,19,0,FALSE,FALSE,FALSE
+38,"B",405,"F","X","Adult","9","M","NP","12","4",18,16,18,16,0,0,0,18,18,0,FALSE,FALSE,FALSE
+38,"B",406,"F","X","Adult","6","M","P (2m)","14","2",19,17,21,20,2,3,-1,19,19,0,FALSE,FALSE,FALSE
+38,"B",407,"F","X","Adult","6","M","NP","11","2",16,14,16,15,0,1,-1,16,16,0,FALSE,FALSE,FALSE
+38,"B",408,"F","X","Heifer","2.5","M","NP","NA","NA",18,15,18,15,0,0,0,18,18,0,FALSE,FALSE,FALSE
+38,"B",409,"F","X","Adult","6","M","P (3m)","15","2",18,15,18,15,0,0,0,18,18,0,FALSE,FALSE,FALSE
+39,"B",410,"F","X","Adult","3","M","P (4m)","16","1st",18,15,18,15,0,0,0,18,18,0,FALSE,FALSE,FALSE
+39,"B",411,"F","X","Calf","7m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+39,"B",412,"F","X","Calf","8m","M","NP","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+39,"B",413,"F","X","Adult","6.5","M","NP","18","3rd",15,14,15,16,0,0,0,15,15,0,FALSE,FALSE,FALSE
+39,"B",414,"F","X","Adult","5.5","M","NP","15","2nd",15,13,15,14,0,1,-1,15,15,0,FALSE,FALSE,FALSE
+39,"B",415,"F","X","Adult","7","M","NP","14","3rd",20,17,22,17,2,0,2,20,20,0,FALSE,FALSE,FALSE
+39,"B",416,"F","X","Adult","4","M","P (4m)","17","1st",16,12,16,13,0,1,-1,16,16,0,FALSE,FALSE,FALSE
+39,"B",417,"F","X","Adult","5.5","M","NP","14","2nd",17,16,17,16,0,0,0,17,17,0,FALSE,FALSE,FALSE
+39,"B",418,"F","X","Adult","6","M","NP","15","2nd",19,16,19,18,0,2,-2,19,19,0,FALSE,FALSE,FALSE
+39,"B",419,"F","X","Adult","5.5","M","P (2m)","14","2nd",20,19,21,19,1,0,1,20,20,0,FALSE,FALSE,FALSE
+39,"B",420,"F","X","Adult","7","M","NP","14","3rd",15,12,15,12,0,0,0,15,15,0,FALSE,FALSE,FALSE
+39,"B",421,"F","X","Heifer","2.5","M","NP","NA","NA",10,8,10,8,0,0,0,10,10,0,FALSE,FALSE,FALSE
+39,"B",422,"F","X","Heifer","3","M","NP","NA","NA",8,6,8,6,0,0,0,8,8,0,FALSE,FALSE,FALSE
+39,"B",423,"F","X","Heifer","2","M","NP","NA","NA",15,12,16,12,1,0,1,15,15,0,FALSE,FALSE,FALSE
+39,"B",424,"F","X","Heifer","1.5","M","NP","NA","NA",11,9,11,11,0,2,-2,11,11,0,FALSE,FALSE,FALSE
+39,"B",425,"F","X","Heifer","2","M","NP","NA","NA",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+39,"B",426,"F","X","Heifer","2.5","M","NP","NA","NA",12,9,12,9,0,0,0,12,12,0,FALSE,FALSE,FALSE
+39,"B",427,"F","X","Heifer","3","M","P (3m)","NA","NA",17,14,17,15,0,1,-1,17,17,0,FALSE,FALSE,FALSE
+40,"B",428,"F","Y","Adult","9","M","NP","14","4th",18,14,29,22,11,8,3,15,15,0,TRUE,FALSE,FALSE
+40,"B",429,"F","Y","Adult","9","M","P (3m)","9","4th",19,18,22,19,3,1,2,19,20,1,FALSE,FALSE,FALSE
+40,"B",430,"F","Y","Adult","5","M","NP","11","2nd",13,11,13,16,0,5,-5,13,13,0,FALSE,FALSE,FALSE
+40,"B",431,"F","Y","Adult","7","M","P (7m)","4","3rd",18,15,40,35,22,20,2,18,21,3,TRUE,FALSE,TRUE
+40,"B",432,"F","Y","Adult","4","M","NP","10","1st",20,18,25,22,5,4,1,20,26,6,TRUE,FALSE,TRUE
+40,"B",433,"F","Y","Adult","5.5","M","P (2m)","10","2nd",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+40,"B",434,"F","Y","Adult","9.5","M","NP","16","4th",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+40,"B",435,"F","Y","Adult","3.5","M","P (3m)","10","1st",15,14,15,14,0,0,0,15,15,0,FALSE,FALSE,FALSE
+40,"B",436,"F","Y","Adult","10","M","P (4m)","10","4th",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+40,"B",437,"F","Y","Adult","13","M","NP","8","5th",16,13,21,19,5,6,-1,16,16,0,TRUE,FALSE,FALSE
+40,"B",438,"F","Y","Adult","15","M","P (5m)","7","6th",18,16,18,16,0,0,0,18,18,0,FALSE,FALSE,FALSE
+40,"B",439,"F","Y","Adult","7","M","NP","9","3rd",21,18,21,18,0,0,0,21,21,0,FALSE,FALSE,FALSE
+40,"B",440,"F","Y","Adult","5","M","NP","10","2nd",21,20,30,28,9,8,1,21,21,0,TRUE,FALSE,FALSE
+40,"B",441,"F","Y","Adult","4","M","P (7m)","11","1st",17,13,17,13,0,0,0,17,17,0,FALSE,FALSE,FALSE
+40,"B",442,"F","Y","Adult","4","M","NP","8","1st",11,11,11,11,0,0,0,12,12,0,FALSE,FALSE,FALSE
+40,"B",443,"F","Y","Adult","5","M","P (1m)","13","2nd",17,14,17,14,0,0,0,17,17,0,FALSE,FALSE,FALSE
+40,"B",444,"F","Y","Adult","4.5","M","P (2m)","8","2nd",15,14,15,14,0,0,0,15,15,0,FALSE,FALSE,FALSE
+40,"B",445,"F","Y","Adult","6","M","P (1m)","12","3rd",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+40,"B",446,"F","Y","Adult","9","M","NP","8","4th",20,17,20,19,0,2,-2,20,20,0,FALSE,FALSE,FALSE
+40,"B",447,"F","Y","Adult","8","M","P(4m)","10","3rd",18,17,18,17,0,0,0,18,18,0,FALSE,FALSE,FALSE
+40,"B",448,"F","Y","Adult","5","M","NP","8","2nd",13,11,14,11,1,0,1,13,13,0,FALSE,FALSE,FALSE
+40,"B",449,"F","Y","Adult","9.5","M","NP","14","4th",14,12,14,13,0,1,-1,14,14,0,FALSE,FALSE,FALSE
+40,"B",450,"F","Y","Adult","5","M","NP","13","2nd",14,13,14,14,0,1,-1,14,14,0,FALSE,FALSE,FALSE
+40,"B",451,"F","Y","Adult","10","M","P (2m)","13","4th",18,18,18,18,0,0,0,19,19,0,FALSE,FALSE,FALSE
+40,"B",452,"F","Y","Adult","5","M","NP","6","2nd",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+40,"B",453,"F","Y","Adult","6","M","NP","15","3rd",14,12,14,12,0,0,0,14,14,0,FALSE,FALSE,FALSE
+40,"B",454,"F","Y","Adult","4.5","M","P (3m)","12","2nd",20,18,22,18,2,0,2,20,20,0,FALSE,FALSE,FALSE
+40,"B",455,"F","Y","Adult","3.5","M","P (2m)","9","1st",13,12,13,12,0,0,0,13,13,0,FALSE,FALSE,FALSE
+40,"B",456,"F","Y","Adult","3.5","M","P (4m)","8","1st",14,13,14,13,0,0,0,14,14,0,FALSE,FALSE,FALSE
+40,"B",457,"F","Y","Adult","6","M","NP","11","2nd",14,12,16,12,2,0,2,14,14,0,FALSE,FALSE,FALSE
+40,"B",458,"F","Y","Adult","3","M","P (5m)","13","1st",22,20,22,21,0,1,-1,22,22,0,FALSE,FALSE,FALSE
+40,"B",459,"F","Y","Adult","4","M","NP","16","2nd",15,14,15,15,0,1,-1,15,15,0,FALSE,FALSE,FALSE
+40,"B",460,"F","Y","Adult","6","M","NP","5","3rd",14,12,15,12,1,0,1,14,14,0,FALSE,FALSE,FALSE
+40,"B",461,"F","Y","Adult","4","M","P (6m)","11","1st",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+40,"B",462,"F","Y","Adult","9","M","P (7m)","12","4th",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+40,"B",463,"F","Y","Adult","11","M","P (2m)","10","5th",18,16,18,16,0,0,0,18,18,0,FALSE,FALSE,FALSE
+40,"B",464,"F","Y","Heifer","12","M","NP","NA","NA",18,16,19,17,1,1,0,18,18,0,FALSE,FALSE,FALSE
+40,"B",465,"F","Y","Heifer","3","M","NP","NA","NA",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+40,"B",466,"F","Y","Heifer","2.5","M","NP","NA","NA",23,19,24,20,1,1,0,23,23,0,FALSE,FALSE,FALSE
+40,"B",467,"F","Y","Heifer","3","M","NP","NA","NA",19,17,19,17,0,0,0,19,19,0,FALSE,FALSE,FALSE
+40,"B",468,"F","Y","Calf","8m","M","NP","NA","NA",6,5,6,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+40,"B",469,"F","Y","Calf","6m","M","NP","NA","NA",7,6,7,6,0,0,0,7,7,0,FALSE,FALSE,FALSE
+41,"B",470,"F","X","Adult","6","M","NP","12","2nd",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+41,"B",471,"F","X","Adult","4","M","P (2m)","11","1st",17,15,18,15,1,0,1,17,17,0,FALSE,FALSE,FALSE
+41,"B",472,"F","X","Adult","10","M","P (5m)","14","4th",18,16,18,18,0,2,-2,18,18,0,FALSE,FALSE,FALSE
+41,"B",473,"F","X","Adult","4.5","M","P (2m)","11","1st",19,17,19,19,0,2,-2,19,19,0,FALSE,FALSE,FALSE
+42,"B",474,"F","X","Adult","7.5","M","NP","10","3rd",15,12,16,13,1,1,0,15,15,0,FALSE,FALSE,FALSE
+42,"B",475,"F","X","Adult","5","M","NP","14","2nd",19,18,19,18,0,0,0,19,19,0,FALSE,FALSE,FALSE
+42,"B",476,"F","X","Adult","5.5","M","NP","10","2nd",16,14,16,14,0,0,0,15,15,0,FALSE,FALSE,FALSE
+42,"B",477,"F","X","Adult","7","M","NP","14","3rd",17,16,19,19,2,3,-1,17,17,0,FALSE,FALSE,FALSE
+42,"B",478,"F","X","Adult","5","M","NP","10","2nd",15,13,15,13,0,0,0,15,15,0,FALSE,FALSE,FALSE
+42,"B",479,"F","X","Adult","7","M","NP","9","3rd",19,17,19,17,0,0,0,19,19,0,FALSE,FALSE,FALSE
+42,"B",480,"F","X","Adult","9","M","P(1m)","10","4th",17,16,17,16,0,0,0,17,17,0,FALSE,FALSE,FALSE
+42,"B",481,"F","X","Adult","12","M","NP","13","5th",19,17,19,17,0,0,0,19,19,0,FALSE,FALSE,FALSE
+43,"B",482,"F","X","Adult","7","M","NP","9","3rd",15,11,15,11,0,0,0,15,15,0,FALSE,FALSE,FALSE
+43,"B",483,"F","X","Adult","5.5","M","NP","8","2nd",17,15,17,16,0,1,-1,17,17,0,FALSE,FALSE,FALSE
+43,"B",484,"F","X","Adult","9","M","NP","6","4th",17,15,17,15,0,0,0,17,17,0,FALSE,FALSE,FALSE
+43,"B",485,"F","X","Adult","5","M","NP","10","2nd",15,13,15,14,0,1,-1,15,15,0,FALSE,FALSE,FALSE
+43,"B",486,"F","X","Adult","5","M","NP","12","2nd",25,20,25,20,0,0,0,25,25,0,FALSE,FALSE,FALSE
+43,"B",487,"F","X","Adult","5.5","M","NP","6","2nd",18,16,19,16,1,0,1,18,18,0,FALSE,FALSE,FALSE
+43,"B",488,"F","X","Adult","7","M","NP","14","3rd",15,14,15,14,0,0,0,15,15,0,FALSE,FALSE,FALSE
+43,"B",489,"F","X","Adult","6.5","M","NP","8","3rd",20,18,22,19,2,1,1,20,20,0,FALSE,FALSE,FALSE
+43,"B",490,"F","X","Calf","7m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+43,"B",491,"F","X","Calf","6m","M","NP","NA","NA",7,6,7,6,0,0,0,7,7,0,FALSE,FALSE,FALSE
+43,"B",492,"F","X","Calf","8m","M","NP","NA","NA",8,6,8,6,0,0,0,8,8,0,FALSE,FALSE,FALSE
+44,"B",493,"F","X","Adult","4","M","NP","10","1st",16,14,16,14,0,0,0,16,16,0,FALSE,FALSE,FALSE
+44,"B",494,"F","X","Heifer","2.5","M","NP","NA","NA",18,16,18,17,0,0,0,18,18,0,FALSE,FALSE,FALSE
+44,"B",495,"F","X","Heifer","2","M","NP","NA","NA",16,15,16,15,0,0,0,16,16,0,FALSE,FALSE,FALSE
+44,"B",496,"F","X","Heifer","1.5","M","NP","NA","NA",10,8,10,8,0,0,0,10,10,0,FALSE,FALSE,FALSE
+44,"B",497,"F","X","Heifer","1","M","NP","NA","NA",12,11,12,11,0,0,0,12,12,0,FALSE,FALSE,FALSE
+44,"B",498,"F","X","Calf","9m","M","NP","NA","NA",8,6,8,6,0,0,0,8,8,0,FALSE,FALSE,FALSE
+44,"B",499,"F","X","Adult","4.5","M","P (3m)","12","1st",16,15,16,15,0,0,0,16,16,0,FALSE,FALSE,FALSE
+44,"B",500,"F","X","Adult","13","M","P (1m)","10","5th",18,17,18,19,0,2,-2,18,18,0,FALSE,FALSE,FALSE
+44,"B",501,"F","X","Calf","9m","M","NP","NA","NA",10,7,10,7,0,0,0,10,10,0,FALSE,FALSE,FALSE
+44,"B",502,"F","X","Heifer","2","M","NP","NA","NA",17,14,17,14,0,0,0,17,17,0,FALSE,FALSE,FALSE
+44,"B",503,"F","X","Calf","8m","M","NP","NA","NA",9,7,9,7,0,0,0,9,9,0,FALSE,FALSE,FALSE
+44,"B",504,"F","X","Heifer","1.5","M","NP","NA","NA",8,8,8,8,0,0,0,8,8,0,FALSE,FALSE,FALSE
+44,"B",505,"F","X","Heifer","2","M","NP","NA","NA",11,10,11,11,0,1,-1,11,11,0,FALSE,FALSE,FALSE
+44,"B",506,"F","X","Heifer","2.5","M","NP","NA","NA",16,12,16,12,0,0,0,16,16,0,FALSE,FALSE,FALSE
+44,"B",507,"F","X","Heifer","2","M","NP","NA","NA",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+44,"B",508,"F","X","Heifer","2.5","M","NP","NA","NA",14,12,14,12,0,0,0,19,19,0,FALSE,FALSE,FALSE
+44,"B",509,"F","X","Adult","5","M","P (4m)","10","2nd",19,16,19,18,0,2,-2,18,18,0,FALSE,FALSE,FALSE
+45,"B",510,"F","X","Heifer","2","M","NP","NA","NA",9,7,9,7,0,0,0,9,9,0,FALSE,FALSE,FALSE
+45,"B",511,"F","X","Heifer","1.5","M","NP","NA","NA",11,9,11,9,0,0,0,12,12,0,FALSE,FALSE,FALSE
+46,"B",512,"F","X","Calf","8m","M","NP","NA","NA",6,5,6,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+46,"B",513,"F","X","Calf","9m","M","NP","NA","NA",6,5,6,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+46,"B",514,"F","X","Calf","6m","M","NP","NA","NA",5,4,5,4,0,0,0,5,5,0,FALSE,FALSE,FALSE
+46,"B",515,"F","X","Calf","7m","M","NP","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+46,"B",516,"F","X","Heifer","1.5","M","NP","NA","NA",12,9,12,9,0,0,0,12,12,0,FALSE,FALSE,FALSE
+46,"B",517,"F","X","Heifer","1.5","M","NP","NA","NA",13,9,13,9,0,0,0,14,14,0,FALSE,FALSE,FALSE
+46,"B",518,"F","X","Heifer","2","M","NP","NA","NA",14,11,14,11,0,0,0,14,14,0,FALSE,FALSE,FALSE
+47,"B",519,"F","X","Calf","7m","M","NA","NA","NA",9,7,9,7,0,0,0,9,9,0,FALSE,FALSE,FALSE
+47,"B",520,"F","X","Calf","9m","M","NA","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+47,"B",521,"F","X","Heifer","2","M","NP","NA","NA",11,9,11,9,0,0,0,12,12,0,FALSE,FALSE,FALSE
+47,"B",522,"F","X","Heifer","2","M","NP","NA","NA",12,10,12,10,0,0,0,12,12,0,FALSE,FALSE,FALSE
+48,"B",523,"F","X","Calf","6m","M","NA","NA","NA",6,5,6,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+48,"B",524,"F","X","Calf","7m","M","NA","NA","NA",7,4,7,4,0,0,0,7,7,0,FALSE,FALSE,FALSE
+48,"B",525,"F","X","Calf","7m","M","NA","NA","NA",8,5,8,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+48,"B",526,"F","X","Calf","6m","M","NA","NA","NA",10,8,10,8,0,0,0,10,10,0,FALSE,FALSE,FALSE
+48,"B",527,"F","X","Calf","7m","M","NA","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+48,"B",528,"F","X","Calf","8m","M","NA","NA","NA",7,5,7,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+48,"B",529,"F","X","Calf","9m","M","NA","NA","NA",5,3,5,3,0,0,0,5,5,0,FALSE,FALSE,FALSE
+48,"B",530,"F","X","Calf","8m","M","NA","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+48,"B",531,"F","X","Calf","11m","M","NA","NA","NA",11,9,11,9,0,0,0,11,11,0,FALSE,FALSE,FALSE
+48,"B",532,"F","X","Heifer","2.5","M","NP","NA","NA",13,11,13,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+48,"B",533,"F","X","Calf","7m","M","NA","NA","NA",6,5,6,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
+48,"B",534,"F","X","Calf","6m","M","NA","NA","NA",7,6,7,6,0,0,0,7,7,0,FALSE,FALSE,FALSE
+48,"B",535,"F","X","Heifer","2.5","M","NP","NA","NA",8,6,8,6,0,0,0,8,8,0,FALSE,FALSE,FALSE
+48,"B",536,"F","X","Heifer","3","M","NP","NA","NA",11,10,11,10,0,0,0,11,11,0,FALSE,FALSE,FALSE
+48,"B",537,"F","X","Heifer","2.5","M","NP","NA","NA",14,11,14,11,0,0,0,13,13,0,FALSE,FALSE,FALSE
+48,"B",538,"F","X","Heifer","2","M","NP","NA","NA",9,8,9,8,0,0,0,9,9,0,FALSE,FALSE,FALSE
+49,"B",539,"F","X","Calf","7m","M","NA","NA","NA",6,4,6,4,0,0,0,6,6,0,FALSE,FALSE,FALSE
+49,"B",540,"F","X","Calf","6m","M","NA","NA","NA",5,4,5,4,0,0,0,5,5,0,FALSE,FALSE,FALSE
+49,"B",541,"F","X","Calf","11m","M","NA","NA","NA",7,5,7,5,0,0,0,7,7,0,FALSE,FALSE,FALSE
+49,"B",542,"F","X","Calf","6m","M","NA","NA","NA",4,4,4,4,0,0,0,4,4,0,FALSE,FALSE,FALSE
+49,"B",543,"F","X","Calf","8m","M","NA","NA","NA",6,5,6,5,0,0,0,6,6,0,FALSE,FALSE,FALSE
