@@ -95,12 +95,12 @@ and the sensitivity of test $k$ will then simply be $a_{k}$ and the specificity 
 
 Following [@collins_estimation_2014; @dendukuri_modeling_2009], and to allow for an extension to model any conditional dependence between tests, we parameterise the model using a probit ($\Phi$) link function :
 
-\[ P(T_{t,k} = 1 | D = 1) = \Phi(a_{t,1}) \]
-\[ P(T_{t,k} = 1 | D = 0) = \Phi(a_{t,0}) \]
+\[ P(T_{i,k} = 1 | D = 1) = \Phi(a_{k,1}) \]
+\[ P(T_{i,k} = 1 | D = 0) = \Phi(a_{k,0}) \]
 
-To ensure numerical stability we restrict the sensitivity parameters (on the probit scale) $a_{t,1}$ to the range  $[-8,8]$. 
+To ensure numerical stability we restrict the sensitivity parameters (on the probit scale) $a_{k,1}$ to the range  $[-8,8]$. 
 
-A common issue with this class of models is that the likelihood can be symmetric under relabeling of the latent variable. This leads to a multi-modal posterior distribution where where two modes can provide an equivalent fit to the data corresponding to the situation where the true positive rate is greater than the false positive rate (TPR > FPR, $\Phi(a_{t,1}) > \Phi(a_{t,0})$) and the inverse where the FPR > TPR ($\Phi(a_{t,0}) > \Phi(a_{t,1})$). Given the performance of the SIT and SICCT tests in other contexts we consider the situation where the FPR > TPR to be biologically implausible and choose prior assumptions to force selection of this mode by restricting $a_{t,0}$ to the range [-8,-1] - equivalent to assuming that no tests have a specificity of $< 80%$. For this baseline model we further assume non-informative normal (0,1) distributions for $a_{t,1}, a_{t,0}$ and a beta $(1,1)$ distribution for the true within-herd prevalence (i.e. the latent or true prevalence).
+A common issue with this class of models is that the likelihood can be symmetric under relabeling of the latent variable. This leads to a multi-modal posterior distribution where where two modes can provide an equivalent fit to the data corresponding to the situation where the true positive rate is greater than the false positive rate (TPR > FPR, $\Phi(a_{k,1}) > \Phi(a_{k,0})$) and the inverse where the FPR > TPR ($\Phi(a_{k,0}) > \Phi(a_{k,1})$). Given the performance of the SIT and SICCT tests in other contexts we consider the situation where the FPR > TPR to be biologically implausible and choose prior assumptions to force selection of this mode by restricting $a_{k,0}$ to the range [-8,-1] - equivalent to assuming that no tests have a specificity of $< 80%$. For this baseline model we further assume non-informative normal (0,1) distributions for $a_{k,1}, a_{k,0}$ and a beta $(1,1)$ distribution for the true within-herd prevalence (i.e. the latent or true prevalence).
 
 The SIT and SICTT test results have an implicit dependence on each other in the sense that they are both calculated based on the magnitude of the observed reaction to bovine tuberculin. The comparison to avian tuberculin in the SICCT test is intended to raise specificity and reduce sensitivity. A biological dependence between the tests – implies - but does not guarantee that there will be a  statistical association between the results of the two tests strong enough to violate the assumption of conditional independence. If the correlation between (true) infection status and the results of each test result is large compared to the correlation between the test results themselves then the conditional dependence will not affect the parameter estimates and the test results can effectively be treated as (statistically) independent. @dendukuri_modeling_2009 proposed a method for testing whether the assumption of conditional dependence is satisfied by calculating the pairwise probability of agreement between each pair of diagnostic tests ($k,k'$):
 
@@ -116,14 +116,14 @@ As a further exploration of this issue we suggest an alternative model to accoun
 
 Specifically, we use a normal model for the ROC curve [@irwin_lognormal_nodate] which arises from assuming that the false and true positive rates for each test have equal variance $\sigma_{g}$. The parameter $\sigma_{g}$ defines the shape of the ROC curve and the relationship between sensitivity and specificity for a group of tests $g$. Using this functional form we can write the conditional probabilities of a positive result as:
 
-\[ P(T_{t,k} = 1 | D = 0) = \Phi(a_{t,0}) \]
-\[ P(T_{t,k} = 1 | D = 1) = \Phi(\Phi^{-1}(a_{t,0}) + i_{g} \sigma_{g}) \]
+\[ P(T_{i,k} = 1 | D = 0) = \Phi(a_{k,0}) \]
+\[ P(T_{i,k} = 1 | D = 1) = \Phi(\Phi^{-1}(a_{k,0}) + i_{g} \sigma_{g}) \]
 
 Where we have two groups $g={1,2}$ with a shared parameter ($\sigma_{1}$) for the SIT and SICCT tests constraining them to lie on a shared ROC curve and a separate parameter $\sigma_{2}$ for the DST. For brevity, we will thus refer to this as the WHROC model.
 
 For the whROC model we restrict the range of $\sigma_{g}$ to $[0,8]$ and use an indicator variable $i_g$ to choose between the default  (TPR > FPR; $i_g = 1$) and alternative prior assumptions (FPR > TPR; $i_g = -1$). As well as allowing us to explicitly model the potential dependence between SIT and SICCT tests, we can also illustrate the parameter estimates that would be obtained by specifying the alternative prior (FPR > TPR;$i_g = -1$).
 
-Again, we assume normal(0,1) priors for both $a_{t,0}$ and $\sigma_g$ and a beta(1,1) prior for the (true or latent) within-herd prevalence. For the SIT/SICCT tests, and in common with the prior assumptions for the baseline model above we set $i_{g}=1$ corresponding to the assumption that both tests have a TPR > FPR.  Thus we fit a total of three models corresponding to the baseline WH model and the alternative WHROC model with the default and alternative prior assumptions:
+Again, we assume normal(0,1) priors for both $a_{k,0}$ and $\sigma_g$ and a beta(1,1) prior for the (true or latent) within-herd prevalence. For the SIT/SICCT tests, and in common with the prior assumptions for the baseline model above we set $i_{g}=1$ corresponding to the assumption that both tests have a TPR > FPR.  Thus we fit a total of three models corresponding to the baseline WH model and the alternative WHROC model with the default and alternative prior assumptions:
 
 * Model 1: Baseline WH model 
 * Model 2: WHROC model SIT, SICCT (Default Prior, $i_{g}=1$), DST (Default Prior, $i_{g}=1$)
